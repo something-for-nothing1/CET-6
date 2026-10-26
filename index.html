@@ -16,8 +16,10 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 @media(max-width:650px){main{padding:0 12px;margin:16px auto}h1{font-size:30px}.hero{padding:10px 6px 18px}.hero-stats{gap:22px}.calendar{padding:15px 10px;border-radius:15px}.cal-heading{align-items:flex-start;gap:8px}.cal-heading h2{font-size:19px}.month-tabs button{padding:5px 9px;font-size:12px}.cal-sub{font-size:10px}.month-grid{gap:3px}.cal-date,.cal-date.inactive{min-height:95px;padding:7px 4px;border-radius:6px}.cal-date.today{padding:6px 3px}.date-number{font-size:16px}.day-label{display:none}.date-topic{font-size:9px;height:28px;margin-top:7px}.date-state{font-size:9px;gap:2px}.date-state .weak-count{display:none}.cal-footer{font-size:10px}.day,.vocab-panel{padding:15px}.tools{gap:5px}.tools button,.tools select{font-size:11px;padding:7px 9px}.calendar table{min-width:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 @media print{main{padding:0}.hero-stats,.calendar,.about,.guide{display:none}.day,.vocab-panel{border:0;background:white}body{background:white}}
-</style></head><body><main><header class="hero"><div class="eyebrow">CET–6 · STUDY PLANNER</div><h1>每天一点，离目标更近。</h1><p class="hero-sub">六级词汇复习 · 2026.10.26 — 12.12</p><div class="hero-stats"><div><strong>48</strong><span>天备考</span></div><div><strong>840</strong><span>核心词汇</span></div><div><strong>550</strong><span>目标分数</span></div></div></header>
-<div class="tools"><button id="mask" type="button" aria-pressed="false">遮住释义和搭配 · 自测</button><button type="button" id="print">打印 / 存为 PDF</button><select id="jump" aria-label="跳转日期"><option value="">跳到某一天…</option>
+ .site-nav{display:flex;align-items:center;gap:8px;padding:12px 0;position:sticky;top:0;background:#f3f4eff5;backdrop-filter:blur(12px);z-index:3}.site-nav a{padding:8px 15px;border-radius:9px;text-decoration:none;color:#78847c;font-size:13px}.site-nav a.active{background:#e2ecdf;color:#315f45;font-weight:600}body:not([data-view="calendar"]) .hero{display:none}.tools{position:static;margin-top:8px}.day{margin-top:14px}.day h3:focus{outline:none}.day-switch{display:flex;justify-content:space-between;gap:10px;padding:12px 0 26px}.day-switch a{text-decoration:none;padding:9px 14px;border:1px solid #dce3da;border-radius:9px;font-size:13px}.calendar{margin-top:8px}.route-tip{font-size:12px;color:var(--muted)}
+@media print{.site-nav,.day-switch{display:none}body[data-view="day"] .day{break-before:auto}}
+</style></head><body data-view="calendar"><main><header class="hero"><div class="eyebrow">CET–6 · STUDY PLANNER</div><h1>每天一点，离目标更近。</h1><p class="hero-sub">六级词汇复习 · 2026.10.26 — 12.12</p><div class="hero-stats"><div><strong>48</strong><span>天备考</span></div><div><strong>840</strong><span>核心词汇</span></div><div><strong>550</strong><span>目标分数</span></div></div></header><nav class="site-nav" aria-label="主导航"><a href="#calendar" data-view-link="calendar">学习日历</a><a href="#vocabulary" data-view-link="vocabulary">我的生词</a><a href="#guide" data-view-link="guide">学习方法</a></nav><noscript><p>请开启浏览器 JavaScript，点击日历日期后查看学习内容。</p></noscript>
+<div class="tools" id="study-tools" hidden><button id="mask" type="button" aria-pressed="false">遮住释义和搭配 · 自测</button><button type="button" id="print">打印 / 存为 PDF</button><select id="jump" aria-label="跳转日期"><option value="">跳到某一天…</option>
 <option value="d1">Day 01｜10月26日</option>
 <option value="d2">Day 02｜10月27日</option>
 <option value="d3">Day 03｜10月28日</option>
@@ -142,18 +144,18 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <div class="cal-date blank" aria-hidden="true"></div>
 </div>
 <div class="cal-footer"><div class="cal-legend"><span><i class="dot"></i>已记分</span><span><i class="dot review"></i>集中复习</span><span><i class="dot exam"></i>考试日</span></div><span id="calendar-progress" aria-live="polite">已记录 0 / 42 天</span></div></section>
-<details class="guide"><summary>每天怎么学 · 35分钟复习方法</summary>
+<details class="guide" id="guide" hidden><summary>每天怎么学 · 35分钟复习方法</summary>
 <p>每天35分钟：①10分钟回忆旧词，先遮中文看英文；②15分钟学习当天20词，读词、理解词义、记搭配；③10分钟遮住英文默写前5个★词及搭配，完成当天中译英，并回查遗漏。练习答案放在文末或折叠区。</p>
 <p>★表示优先输出词：至少会拼写、会用一个搭配；其余词优先做到阅读听力中能识别，不强求全部默写。词性通过搭配辨认；词表未逐词列音标，遇到发音不确定的词请查学习词典并跟读，尤其注意minute的两种读音。</p>
 <p>复习规则：新词学习后的第1、3、7天回看该组，每组20词，因此稳定期每天约60个旧词。清单中只有已经学过的组，第一天没有指定旧词任务。超时则先快测全部旧词，只精记遗忘项，避免挤占写译训练。</p>
 <p>熟练度：看英文2秒内能说出表内核心意思，记为“识义”；看中文能写出★词并搭配正确，记为“输出”。错词次日再测，连续两次正确后移出个人错词表。每周日从已学★词中抽20词检查，不另外加新词。</p>
 <p>搭配提醒：access to、contribute to、adapt to等中的to是介词；enable / persuade someone to do中的to引出不定式。尽量整块记忆，不能把同义词在所有语境中直接互换。</p>
-</details><p class="muted noprint">点击序号标黄生词，再点取消。识义分数与标记自动保存在当前浏览器中。</p>
+<p><a href="#resources">查看易混词、参考表达与补充资料</a></p></details>
 <p id="save-warning" class="save-warning" role="status" hidden>当前浏览器无法保存记录；本次仍可填写和标记，但刷新后可能丢失。</p>
-<section id="vocabulary" class="vocab-panel"><h2>生词 <span id="vocab-count" class="vocab-count" aria-live="polite">（0词）</span></h2><p class="meta">汇总所有标黄的单词，按英文字母顺序排列。在这里点击序号也可取消标记，原表会同步更新。</p><p id="vocab-empty">还没有生词。点击下方每日词表中的序号，将不熟悉的词加入这里。</p><div id="vocab-table" class="tablewrap" hidden><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th><th>学习日</th></tr></thead><tbody id="vocab-body"></tbody></table></div></section>
-<details class="about"><summary>关于这份复习资料</summary><p>适用：四级571分、六级目标550分；侧重词汇补基础、写作翻译输出，同时支持阅读和听力。</p><p>周期：2026年10月26日—12月12日。前42天每天20个词条，共840个不同词头；12月7—11日集中复习，12月12日轻量回顾。</p><p>选词说明：这是围绕六级常见主题、学术阅读、听力场景和写译表达编写的实用核心词表，不是依据某一真题语料库统计的频次榜，也不替代完整考纲词表。例句与小练习均为自编，不是真题引文。</p><p>学习边界：优先掌握表内词义和搭配，不要求一次记住所有义项。词组内少量辅助词不另计新词。已经熟悉的词快速测过，将省下的时间用于真题生词。</p></details>
-<section class="day" id="d1"><h3>Day 01｜10月26日｜学习与教育①：能力和学习过程</h3>
-<p class="meta">旧词复习：无指定旧词；可用四级易忘词热身。</p>
+<section id="vocabulary" class="vocab-panel" hidden><h2>生词 <span id="vocab-count" class="vocab-count" aria-live="polite">（0词）</span></h2><p class="meta">汇总所有标黄的单词，按英文字母顺序排列。在这里点击序号也可取消标记，原表会同步更新。</p><p id="vocab-empty">还没有生词。先从日历选择日期，再点击每日词表中的序号。</p><div id="vocab-table" class="tablewrap" hidden><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th><th>学习日</th></tr></thead><tbody id="vocab-body"></tbody></table></div></section>
+<details class="about" id="about" hidden><summary>关于这份复习资料</summary><p>适用：四级571分、六级目标550分；侧重词汇补基础、写作翻译输出，同时支持阅读和听力。</p><p>周期：2026年10月26日—12月12日。前42天每天20个词条，共840个不同词头；12月7—11日集中复习，12月12日轻量回顾。</p><p>选词说明：这是围绕六级常见主题、学术阅读、听力场景和写译表达编写的实用核心词表，不是依据某一真题语料库统计的频次榜，也不替代完整考纲词表。例句与小练习均为自编，不是真题引文。</p><p>学习边界：优先掌握表内词义和搭配，不要求一次记住所有义项。词组内少量辅助词不另计新词。已经熟悉的词快速测过，将省下的时间用于真题生词。</p></details>
+<section class="day" id="d1" hidden><h3 tabindex="-1">Day 01｜10月26日｜学习与教育①：能力和学习过程</h3>
+<p class="meta">旧词复习：无指定旧词；可用四级易忘词热身。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-1">识义 </label><input class="score" id="score-1" data-day="1" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 01 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="acquire"><td><button type="button" class="word-toggle" data-word="acquire" aria-pressed="false" aria-label="标记生词 acquire">01</button></td><td class="word"><span class="star">★ </span>acquire</td><td class="meaning" tabindex="0"><span>获得；习得</span></td><td class="phrase" tabindex="0"><span>acquire knowledge</span></td></tr>
@@ -177,8 +179,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="aptitude"><td><button type="button" class="word-toggle" data-word="aptitude" aria-pressed="false" aria-label="标记生词 aptitude">19</button></td><td class="word">aptitude</td><td class="meaning" tabindex="0"><span>天资；才能</span></td><td class="phrase" tabindex="0"><span>an aptitude for languages</span></td></tr>
 <tr data-word-row="mastery"><td><button type="button" class="word-toggle" data-word="mastery" aria-pressed="false" aria-label="标记生词 mastery">20</button></td><td class="word">mastery</td><td class="meaning" tabindex="0"><span>精通；掌握</span></td><td class="phrase" tabindex="0"><span>mastery of a subject</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>经常练习有助于学生获取知识、提升能力。<details><summary>完成后查看参考表达</summary><p>Regular practice helps students acquire knowledge and enhance their competence.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d2"><h3>Day 02｜10月27日｜学习与教育②：教学和机会</h3>
-<p class="meta">旧词复习：Day 01（10/26）。</p>
+<section class="day" id="d2" hidden><h3 tabindex="-1">Day 02｜10月27日｜学习与教育②：教学和机会</h3>
+<p class="meta">旧词复习：<a href="#d1">Day 01</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-2">识义 </label><input class="score" id="score-2" data-day="2" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 02 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="access"><td><button type="button" class="word-toggle" data-word="access" aria-pressed="false" aria-label="标记生词 access">01</button></td><td class="word"><span class="star">★ </span>access</td><td class="meaning" tabindex="0"><span>获得或使用的机会；进入</span></td><td class="phrase" tabindex="0"><span>access to education</span></td></tr>
@@ -202,8 +204,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="dropout"><td><button type="button" class="word-toggle" data-word="dropout" aria-pressed="false" aria-label="标记生词 dropout">19</button></td><td class="word">dropout</td><td class="meaning" tabindex="0"><span>辍学者</span></td><td class="phrase" tabindex="0"><span>school dropouts</span></td></tr>
 <tr data-word-row="undergraduate"><td><button type="button" class="word-toggle" data-word="undergraduate" aria-pressed="false" aria-label="标记生词 undergraduate">20</button></td><td class="word">undergraduate</td><td class="meaning" tabindex="0"><span>本科生；本科的</span></td><td class="phrase" tabindex="0"><span>undergraduate education</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>学校应公平分配资源，促进教育机会公平。<details><summary>完成后查看参考表达</summary><p>Schools should allocate resources fairly to promote equitable access to education.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d3"><h3>Day 03｜10月28日｜研究与证据①：调查和分析</h3>
-<p class="meta">旧词复习：Day 02（10/27）。</p>
+<section class="day" id="d3" hidden><h3 tabindex="-1">Day 03｜10月28日｜研究与证据①：调查和分析</h3>
+<p class="meta">旧词复习：<a href="#d2">Day 02</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-3">识义 </label><input class="score" id="score-3" data-day="3" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 03 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="conduct"><td><button type="button" class="word-toggle" data-word="conduct" aria-pressed="false" aria-label="标记生词 conduct">01</button></td><td class="word"><span class="star">★ </span>conduct</td><td class="meaning" tabindex="0"><span>开展；实施；行为</span></td><td class="phrase" tabindex="0"><span>conduct a survey</span></td></tr>
@@ -227,8 +229,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="replicate"><td><button type="button" class="word-toggle" data-word="replicate" aria-pressed="false" aria-label="标记生词 replicate">19</button></td><td class="word">replicate</td><td class="meaning" tabindex="0"><span>重复；复制</span></td><td class="phrase" tabindex="0"><span>replicate a study</span></td></tr>
 <tr data-word-row="conclusion"><td><button type="button" class="word-toggle" data-word="conclusion" aria-pressed="false" aria-label="标记生词 conclusion">20</button></td><td class="word">conclusion</td><td class="meaning" tabindex="0"><span>结论</span></td><td class="phrase" tabindex="0"><span>draw a conclusion</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>研究人员开展调查来研究问题，但仅有相关性不能确立因果关系。<details><summary>完成后查看参考表达</summary><p>Researchers conduct surveys to investigate problems, but correlation alone does not establish causation.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d4"><h3>Day 04｜10月29日｜研究与证据②：可信度和局限</h3>
-<p class="meta">旧词复习：Day 03（10/28）、Day 01（10/26）。</p>
+<section class="day" id="d4" hidden><h3 tabindex="-1">Day 04｜10月29日｜研究与证据②：可信度和局限</h3>
+<p class="meta">旧词复习：<a href="#d3">Day 03</a>、<a href="#d1">Day 01</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-4">识义 </label><input class="score" id="score-4" data-day="4" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 04 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="reliable"><td><button type="button" class="word-toggle" data-word="reliable" aria-pressed="false" aria-label="标记生词 reliable">01</button></td><td class="word"><span class="star">★ </span>reliable</td><td class="meaning" tabindex="0"><span>可靠的</span></td><td class="phrase" tabindex="0"><span>reliable information</span></td></tr>
@@ -252,8 +254,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="significant"><td><button type="button" class="word-toggle" data-word="significant" aria-pressed="false" aria-label="标记生词 significant">19</button></td><td class="word">significant</td><td class="meaning" tabindex="0"><span>重要的；统计上显著的</span></td><td class="phrase" tabindex="0"><span>a significant difference</span></td></tr>
 <tr data-word-row="uncertainty"><td><button type="button" class="word-toggle" data-word="uncertainty" aria-pressed="false" aria-label="标记生词 uncertainty">20</button></td><td class="word">uncertainty</td><td class="meaning" tabindex="0"><span>不确定性</span></td><td class="phrase" tabindex="0"><span>reduce uncertainty</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>可靠的结论需要客观证据，并明确讨论偏差和局限。<details><summary>完成后查看参考表达</summary><p>Reliable conclusions require objective evidence and an explicit discussion of bias and limitations.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d5"><h3>Day 05｜10月30日｜科技与数字生活①：创新和应用</h3>
-<p class="meta">旧词复习：Day 04（10/29）、Day 02（10/27）。</p>
+<section class="day" id="d5" hidden><h3 tabindex="-1">Day 05｜10月30日｜科技与数字生活①：创新和应用</h3>
+<p class="meta">旧词复习：<a href="#d4">Day 04</a>、<a href="#d2">Day 02</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-5">识义 </label><input class="score" id="score-5" data-day="5" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 05 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="innovation"><td><button type="button" class="word-toggle" data-word="innovation" aria-pressed="false" aria-label="标记生词 innovation">01</button></td><td class="word"><span class="star">★ </span>innovation</td><td class="meaning" tabindex="0"><span>创新</span></td><td class="phrase" tabindex="0"><span>technological innovation</span></td></tr>
@@ -277,8 +279,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="application"><td><button type="button" class="word-toggle" data-word="application" aria-pressed="false" aria-label="标记生词 application">19</button></td><td class="word">application</td><td class="meaning" tabindex="0"><span>应用；申请</span></td><td class="phrase" tabindex="0"><span>practical applications</span></td></tr>
 <tr data-word-row="accessible"><td><button type="button" class="word-toggle" data-word="accessible" aria-pressed="false" aria-label="标记生词 accessible">20</button></td><td class="word">accessible</td><td class="meaning" tabindex="0"><span>可获得的；易使用的</span></td><td class="phrase" tabindex="0"><span>accessible to everyone</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>技术创新可以改变教育，并使学习资源更容易获取。<details><summary>完成后查看参考表达</summary><p>Technological innovation can transform education and facilitate access to learning resources.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d6"><h3>Day 06｜10月31日｜科技与数字生活②：风险和规范</h3>
-<p class="meta">旧词复习：Day 05（10/30）、Day 03（10/28）。</p>
+<section class="day" id="d6" hidden><h3 tabindex="-1">Day 06｜10月31日｜科技与数字生活②：风险和规范</h3>
+<p class="meta">旧词复习：<a href="#d5">Day 05</a>、<a href="#d3">Day 03</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-6">识义 </label><input class="score" id="score-6" data-day="6" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 06 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="privacy"><td><button type="button" class="word-toggle" data-word="privacy" aria-pressed="false" aria-label="标记生词 privacy">01</button></td><td class="word"><span class="star">★ </span>privacy</td><td class="meaning" tabindex="0"><span>隐私</span></td><td class="phrase" tabindex="0"><span>protect personal privacy</span></td></tr>
@@ -302,8 +304,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="copyright"><td><button type="button" class="word-toggle" data-word="copyright" aria-pressed="false" aria-label="标记生词 copyright">19</button></td><td class="word">copyright</td><td class="meaning" tabindex="0"><span>版权</span></td><td class="phrase" tabindex="0"><span>copyright protection</span></td></tr>
 <tr data-word-row="accountability"><td><button type="button" class="word-toggle" data-word="accountability" aria-pressed="false" aria-label="标记生词 accountability">20</button></td><td class="word">accountability</td><td class="meaning" tabindex="0"><span>问责；承担责任</span></td><td class="phrase" tabindex="0"><span>ensure accountability</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>需要明确的规则来保护隐私，并确保个人数据使用的透明度。<details><summary>完成后查看参考表达</summary><p>Clear rules are needed to protect privacy and ensure transparency in the use of personal data.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d7"><h3>Day 07｜11月1日｜工作与职业①：就业和能力</h3>
-<p class="meta">旧词复习：Day 06（10/31）、Day 04（10/29）。</p>
+<section class="day" id="d7" hidden><h3 tabindex="-1">Day 07｜11月1日｜工作与职业①：就业和能力</h3>
+<p class="meta">旧词复习：<a href="#d6">Day 06</a>、<a href="#d4">Day 04</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-7">识义 </label><input class="score" id="score-7" data-day="7" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 07 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="employment"><td><button type="button" class="word-toggle" data-word="employment" aria-pressed="false" aria-label="标记生词 employment">01</button></td><td class="word"><span class="star">★ </span>employment</td><td class="meaning" tabindex="0"><span>就业；雇用</span></td><td class="phrase" tabindex="0"><span>employment opportunities</span></td></tr>
@@ -327,8 +329,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="promotion"><td><button type="button" class="word-toggle" data-word="promotion" aria-pressed="false" aria-label="标记生词 promotion">19</button></td><td class="word">promotion</td><td class="meaning" tabindex="0"><span>晋升；推广</span></td><td class="phrase" tabindex="0"><span>career promotion</span></td></tr>
 <tr data-word-row="prospect"><td><button type="button" class="word-toggle" data-word="prospect" aria-pressed="false" aria-label="标记生词 prospect">20</button></td><td class="word">prospect</td><td class="meaning" tabindex="0"><span>前景；可能性</span></td><td class="phrase" tabindex="0"><span>career prospects</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>雇主重视能够主动行动、适应新挑战的应聘者。<details><summary>完成后查看参考表达</summary><p>Employers value candidates who take the initiative and adapt to new challenges.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d8"><h3>Day 08｜11月2日｜工作与职业②：劳动和组织</h3>
-<p class="meta">旧词复习：Day 07（11/01）、Day 05（10/30）、Day 01（10/26）。</p>
+<section class="day" id="d8" hidden><h3 tabindex="-1">Day 08｜11月2日｜工作与职业②：劳动和组织</h3>
+<p class="meta">旧词复习：<a href="#d7">Day 07</a>、<a href="#d5">Day 05</a>、<a href="#d1">Day 01</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-8">识义 </label><input class="score" id="score-8" data-day="8" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 08 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="productivity"><td><button type="button" class="word-toggle" data-word="productivity" aria-pressed="false" aria-label="标记生词 productivity">01</button></td><td class="word"><span class="star">★ </span>productivity</td><td class="meaning" tabindex="0"><span>生产率</span></td><td class="phrase" tabindex="0"><span>labour productivity</span></td></tr>
@@ -352,8 +354,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="coordinate"><td><button type="button" class="word-toggle" data-word="coordinate" aria-pressed="false" aria-label="标记生词 coordinate">19</button></td><td class="word">coordinate</td><td class="meaning" tabindex="0"><span>协调</span></td><td class="phrase" tabindex="0"><span>coordinate activities</span></td></tr>
 <tr data-word-row="morale"><td><button type="button" class="word-toggle" data-word="morale" aria-pressed="false" aria-label="标记生词 morale">20</button></td><td class="word">morale</td><td class="meaning" tabindex="0"><span>士气</span></td><td class="phrase" tabindex="0"><span>boost staff morale</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>合理的工作量与公平的激励可以提高生产率、改善员工福祉。<details><summary>完成后查看参考表达</summary><p>Reasonable workloads and fair incentives can improve productivity and employee well-being.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d9"><h3>Day 09｜11月3日｜经济与消费①：市场和增长</h3>
-<p class="meta">旧词复习：Day 08（11/02）、Day 06（10/31）、Day 02（10/27）。</p>
+<section class="day" id="d9" hidden><h3 tabindex="-1">Day 09｜11月3日｜经济与消费①：市场和增长</h3>
+<p class="meta">旧词复习：<a href="#d8">Day 08</a>、<a href="#d6">Day 06</a>、<a href="#d2">Day 02</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-9">识义 </label><input class="score" id="score-9" data-day="9" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 09 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="economy"><td><button type="button" class="word-toggle" data-word="economy" aria-pressed="false" aria-label="标记生词 economy">01</button></td><td class="word"><span class="star">★ </span>economy</td><td class="meaning" tabindex="0"><span>经济；节约</span></td><td class="phrase" tabindex="0"><span>the global economy</span></td></tr>
@@ -377,8 +379,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="fluctuate"><td><button type="button" class="word-toggle" data-word="fluctuate" aria-pressed="false" aria-label="标记生词 fluctuate">19</button></td><td class="word">fluctuate</td><td class="meaning" tabindex="0"><span>波动</span></td><td class="phrase" tabindex="0"><span>prices fluctuate</span></td></tr>
 <tr data-word-row="prosperity"><td><button type="button" class="word-toggle" data-word="prosperity" aria-pressed="false" aria-label="标记生词 prosperity">20</button></td><td class="word">prosperity</td><td class="meaning" tabindex="0"><span>繁荣</span></td><td class="phrase" tabindex="0"><span>economic prosperity</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>投资可以刺激需求，但政策制定者也必须考虑通胀和公共支出。<details><summary>完成后查看参考表达</summary><p>Investment can stimulate demand, but policymakers must also consider inflation and public expenditure.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d10"><h3>Day 10｜11月4日｜经济与消费②：购物和决策</h3>
-<p class="meta">旧词复习：Day 09（11/03）、Day 07（11/01）、Day 03（10/28）。</p>
+<section class="day" id="d10" hidden><h3 tabindex="-1">Day 10｜11月4日｜经济与消费②：购物和决策</h3>
+<p class="meta">旧词复习：<a href="#d9">Day 09</a>、<a href="#d7">Day 07</a>、<a href="#d3">Day 03</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-10">识义 </label><input class="score" id="score-10" data-day="10" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 10 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="affordable"><td><button type="button" class="word-toggle" data-word="affordable" aria-pressed="false" aria-label="标记生词 affordable">01</button></td><td class="word"><span class="star">★ </span>affordable</td><td class="meaning" tabindex="0"><span>负担得起的</span></td><td class="phrase" tabindex="0"><span>affordable products</span></td></tr>
@@ -402,8 +404,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="transaction"><td><button type="button" class="word-toggle" data-word="transaction" aria-pressed="false" aria-label="标记生词 transaction">19</button></td><td class="word">transaction</td><td class="meaning" tabindex="0"><span>交易</span></td><td class="phrase" tabindex="0"><span>an online transaction</span></td></tr>
 <tr data-word-row="subscription"><td><button type="button" class="word-toggle" data-word="subscription" aria-pressed="false" aria-label="标记生词 subscription">20</button></td><td class="word">subscription</td><td class="meaning" tabindex="0"><span>订阅；订购费</span></td><td class="phrase" tabindex="0"><span>a monthly subscription</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>理性的消费者在购买前会评估不同选择，并优先考虑基本需求。<details><summary>完成后查看参考表达</summary><p>Rational consumers evaluate alternatives and prioritize essential needs before making a purchase.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d11"><h3>Day 11｜11月5日｜环境与气候①：问题和影响</h3>
-<p class="meta">旧词复习：Day 10（11/04）、Day 08（11/02）、Day 04（10/29）。</p>
+<section class="day" id="d11" hidden><h3 tabindex="-1">Day 11｜11月5日｜环境与气候①：问题和影响</h3>
+<p class="meta">旧词复习：<a href="#d10">Day 10</a>、<a href="#d8">Day 08</a>、<a href="#d4">Day 04</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-11">识义 </label><input class="score" id="score-11" data-day="11" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 11 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="environment"><td><button type="button" class="word-toggle" data-word="environment" aria-pressed="false" aria-label="标记生词 environment">01</button></td><td class="word"><span class="star">★ </span>environment</td><td class="meaning" tabindex="0"><span>环境</span></td><td class="phrase" tabindex="0"><span>protect the environment</span></td></tr>
@@ -427,8 +429,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="irreversible"><td><button type="button" class="word-toggle" data-word="irreversible" aria-pressed="false" aria-label="标记生词 irreversible">19</button></td><td class="word">irreversible</td><td class="meaning" tabindex="0"><span>不可逆的</span></td><td class="phrase" tabindex="0"><span>irreversible damage</span></td></tr>
 <tr data-word-row="disruption"><td><button type="button" class="word-toggle" data-word="disruption" aria-pressed="false" aria-label="标记生词 disruption">20</button></td><td class="word">disruption</td><td class="meaning" tabindex="0"><span>扰乱；中断</span></td><td class="phrase" tabindex="0"><span>ecosystem disruption</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>排放增加可能造成严重后果，因此环境保护成为紧迫的优先事项。<details><summary>完成后查看参考表达</summary><p>Rising emissions can have serious consequences, making environmental protection an urgent priority.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d12"><h3>Day 12｜11月6日｜环境与气候②：保护和治理</h3>
-<p class="meta">旧词复习：Day 11（11/05）、Day 09（11/03）、Day 05（10/30）。</p>
+<section class="day" id="d12" hidden><h3 tabindex="-1">Day 12｜11月6日｜环境与气候②：保护和治理</h3>
+<p class="meta">旧词复习：<a href="#d11">Day 11</a>、<a href="#d9">Day 09</a>、<a href="#d5">Day 05</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-12">识义 </label><input class="score" id="score-12" data-day="12" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 12 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="sustainable"><td><button type="button" class="word-toggle" data-word="sustainable" aria-pressed="false" aria-label="标记生词 sustainable">01</button></td><td class="word"><span class="star">★ </span>sustainable</td><td class="meaning" tabindex="0"><span>可持续的</span></td><td class="phrase" tabindex="0"><span>sustainable development</span></td></tr>
@@ -452,8 +454,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="monitor"><td><button type="button" class="word-toggle" data-word="monitor" aria-pressed="false" aria-label="标记生词 monitor">19</button></td><td class="word">monitor</td><td class="meaning" tabindex="0"><span>监测；监督</span></td><td class="phrase" tabindex="0"><span>monitor air quality</span></td></tr>
 <tr data-word-row="stewardship"><td><button type="button" class="word-toggle" data-word="stewardship" aria-pressed="false" aria-label="标记生词 stewardship">20</button></td><td class="word">stewardship</td><td class="meaning" tabindex="0"><span>管理和保护责任</span></td><td class="phrase" tabindex="0"><span>environmental stewardship</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>政府应实施可持续政策并提高公众意识，以保护资源。<details><summary>完成后查看参考表达</summary><p>Governments should implement sustainable policies and raise public awareness to conserve resources.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d13"><h3>Day 13｜11月7日｜能源与资源</h3>
-<p class="meta">旧词复习：Day 12（11/06）、Day 10（11/04）、Day 06（10/31）。</p>
+<section class="day" id="d13" hidden><h3 tabindex="-1">Day 13｜11月7日｜能源与资源</h3>
+<p class="meta">旧词复习：<a href="#d12">Day 12</a>、<a href="#d10">Day 10</a>、<a href="#d6">Day 06</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-13">识义 </label><input class="score" id="score-13" data-day="13" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 13 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="renewable"><td><button type="button" class="word-toggle" data-word="renewable" aria-pressed="false" aria-label="标记生词 renewable">01</button></td><td class="word"><span class="star">★ </span>renewable</td><td class="meaning" tabindex="0"><span>可再生的</span></td><td class="phrase" tabindex="0"><span>renewable energy</span></td></tr>
@@ -477,8 +479,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="extract"><td><button type="button" class="word-toggle" data-word="extract" aria-pressed="false" aria-label="标记生词 extract">19</button></td><td class="word">extract</td><td class="meaning" tabindex="0"><span>提取；开采</span></td><td class="phrase" tabindex="0"><span>extract minerals</span></td></tr>
 <tr data-word-row="utilize"><td><button type="button" class="word-toggle" data-word="utilize" aria-pressed="false" aria-label="标记生词 utilize">20</button></td><td class="word">utilize</td><td class="meaning" tabindex="0"><span>利用</span></td><td class="phrase" tabindex="0"><span>utilize resources effectively</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>向可再生能源转型可以减少对化石燃料的依赖。<details><summary>完成后查看参考表达</summary><p>The transition to renewable energy can reduce dependence on fossil fuels.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d14"><h3>Day 14｜11月8日｜健康与医疗①：预防和生活方式</h3>
-<p class="meta">旧词复习：Day 13（11/07）、Day 11（11/05）、Day 07（11/01）。</p>
+<section class="day" id="d14" hidden><h3 tabindex="-1">Day 14｜11月8日｜健康与医疗①：预防和生活方式</h3>
+<p class="meta">旧词复习：<a href="#d13">Day 13</a>、<a href="#d11">Day 11</a>、<a href="#d7">Day 07</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-14">识义 </label><input class="score" id="score-14" data-day="14" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 14 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="maintain"><td><button type="button" class="word-toggle" data-word="maintain" aria-pressed="false" aria-label="标记生词 maintain">01</button></td><td class="word"><span class="star">★ </span>maintain</td><td class="meaning" tabindex="0"><span>维持；保养；主张</span></td><td class="phrase" tabindex="0"><span>maintain a healthy lifestyle</span></td></tr>
@@ -502,8 +504,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="screening"><td><button type="button" class="word-toggle" data-word="screening" aria-pressed="false" aria-label="标记生词 screening">19</button></td><td class="word">screening</td><td class="meaning" tabindex="0"><span>筛查</span></td><td class="phrase" tabindex="0"><span>cancer screening</span></td></tr>
 <tr data-word-row="hygiene"><td><button type="button" class="word-toggle" data-word="hygiene" aria-pressed="false" aria-label="标记生词 hygiene">20</button></td><td class="word">hygiene</td><td class="meaning" tabindex="0"><span>卫生</span></td><td class="phrase" tabindex="0"><span>personal hygiene</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>均衡饮食与适度运动有益健康，有助于预防疾病。<details><summary>完成后查看参考表达</summary><p>A balanced diet and moderate exercise are beneficial to health and help prevent disease.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d15"><h3>Day 15｜11月9日｜健康与医疗②：服务和公共卫生</h3>
-<p class="meta">旧词复习：Day 14（11/08）、Day 12（11/06）、Day 08（11/02）。</p>
+<section class="day" id="d15" hidden><h3 tabindex="-1">Day 15｜11月9日｜健康与医疗②：服务和公共卫生</h3>
+<p class="meta">旧词复习：<a href="#d14">Day 14</a>、<a href="#d12">Day 12</a>、<a href="#d8">Day 08</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-15">识义 </label><input class="score" id="score-15" data-day="15" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 15 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="healthcare"><td><button type="button" class="word-toggle" data-word="healthcare" aria-pressed="false" aria-label="标记生词 healthcare">01</button></td><td class="word"><span class="star">★ </span>healthcare</td><td class="meaning" tabindex="0"><span>医疗保健</span></td><td class="phrase" tabindex="0"><span>access to healthcare</span></td></tr>
@@ -527,8 +529,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="coverage"><td><button type="button" class="word-toggle" data-word="coverage" aria-pressed="false" aria-label="标记生词 coverage">19</button></td><td class="word">coverage</td><td class="meaning" tabindex="0"><span>覆盖范围；保险保障</span></td><td class="phrase" tabindex="0"><span>insurance coverage</span></td></tr>
 <tr data-word-row="burden"><td><button type="button" class="word-toggle" data-word="burden" aria-pressed="false" aria-label="标记生词 burden">20</button></td><td class="word">burden</td><td class="meaning" tabindex="0"><span>负担</span></td><td class="phrase" tabindex="0"><span>the burden of disease</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>早期干预与充足的医疗服务应成为公共卫生的优先事项。<details><summary>完成后查看参考表达</summary><p>Early intervention and adequate healthcare should be public health priorities.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d16"><h3>Day 16｜11月10日｜心理与情绪</h3>
-<p class="meta">旧词复习：Day 15（11/09）、Day 13（11/07）、Day 09（11/03）。</p>
+<section class="day" id="d16" hidden><h3 tabindex="-1">Day 16｜11月10日｜心理与情绪</h3>
+<p class="meta">旧词复习：<a href="#d15">Day 15</a>、<a href="#d13">Day 13</a>、<a href="#d9">Day 09</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-16">识义 </label><input class="score" id="score-16" data-day="16" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 16 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="resilience"><td><button type="button" class="word-toggle" data-word="resilience" aria-pressed="false" aria-label="标记生词 resilience">01</button></td><td class="word"><span class="star">★ </span>resilience</td><td class="meaning" tabindex="0"><span>韧性；恢复能力</span></td><td class="phrase" tabindex="0"><span>build emotional resilience</span></td></tr>
@@ -552,8 +554,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="overwhelm"><td><button type="button" class="word-toggle" data-word="overwhelm" aria-pressed="false" aria-label="标记生词 overwhelm">19</button></td><td class="word">overwhelm</td><td class="meaning" tabindex="0"><span>使不堪重负</span></td><td class="phrase" tabindex="0"><span>feel overwhelmed</span></td></tr>
 <tr data-word-row="trauma"><td><button type="button" class="word-toggle" data-word="trauma" aria-pressed="false" aria-label="标记生词 trauma">20</button></td><td class="word">trauma</td><td class="meaning" tabindex="0"><span>创伤</span></td><td class="phrase" tabindex="0"><span>psychological trauma</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>支持性的环境有助于人们应对焦虑、增强心理韧性。<details><summary>完成后查看参考表达</summary><p>A supportive environment helps people cope with anxiety and build resilience.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d17"><h3>Day 17｜11月11日｜人口与老龄化</h3>
-<p class="meta">旧词复习：Day 16（11/10）、Day 14（11/08）、Day 10（11/04）。</p>
+<section class="day" id="d17" hidden><h3 tabindex="-1">Day 17｜11月11日｜人口与老龄化</h3>
+<p class="meta">旧词复习：<a href="#d16">Day 16</a>、<a href="#d14">Day 14</a>、<a href="#d10">Day 10</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-17">识义 </label><input class="score" id="score-17" data-day="17" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 17 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="demographic"><td><button type="button" class="word-toggle" data-word="demographic" aria-pressed="false" aria-label="标记生词 demographic">01</button></td><td class="word"><span class="star">★ </span>demographic</td><td class="meaning" tabindex="0"><span>人口的；人口统计的</span></td><td class="phrase" tabindex="0"><span>demographic change</span></td></tr>
@@ -577,8 +579,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="population"><td><button type="button" class="word-toggle" data-word="population" aria-pressed="false" aria-label="标记生词 population">19</button></td><td class="word">population</td><td class="meaning" tabindex="0"><span>人口</span></td><td class="phrase" tabindex="0"><span>population growth</span></td></tr>
 <tr data-word-row="density"><td><button type="button" class="word-toggle" data-word="density" aria-pressed="false" aria-label="标记生词 density">20</button></td><td class="word">density</td><td class="meaning" tabindex="0"><span>密度</span></td><td class="phrase" tabindex="0"><span>population density</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>人口结构变化与人口老龄化给养老金制度带来挑战。<details><summary>完成后查看参考表达</summary><p>Demographic change and an ageing population create challenges for pension systems.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d18"><h3>Day 18｜11月12日｜社会公平与公共服务</h3>
-<p class="meta">旧词复习：Day 17（11/11）、Day 15（11/09）、Day 11（11/05）。</p>
+<section class="day" id="d18" hidden><h3 tabindex="-1">Day 18｜11月12日｜社会公平与公共服务</h3>
+<p class="meta">旧词复习：<a href="#d17">Day 17</a>、<a href="#d15">Day 15</a>、<a href="#d11">Day 11</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-18">识义 </label><input class="score" id="score-18" data-day="18" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 18 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="inequality"><td><button type="button" class="word-toggle" data-word="inequality" aria-pressed="false" aria-label="标记生词 inequality">01</button></td><td class="word"><span class="star">★ </span>inequality</td><td class="meaning" tabindex="0"><span>不平等</span></td><td class="phrase" tabindex="0"><span>income inequality</span></td></tr>
@@ -602,8 +604,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="solidarity"><td><button type="button" class="word-toggle" data-word="solidarity" aria-pressed="false" aria-label="标记生词 solidarity">19</button></td><td class="word">solidarity</td><td class="meaning" tabindex="0"><span>团结；相互支持</span></td><td class="phrase" tabindex="0"><span>social solidarity</span></td></tr>
 <tr data-word-row="justice"><td><button type="button" class="word-toggle" data-word="justice" aria-pressed="false" aria-label="标记生词 justice">20</button></td><td class="word">justice</td><td class="meaning" tabindex="0"><span>公正；司法</span></td><td class="phrase" tabindex="0"><span>social justice</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>包容的社会公平分配资源，并支持弱势群体。<details><summary>完成后查看参考表达</summary><p>An inclusive society distributes resources fairly and supports disadvantaged groups.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d19"><h3>Day 19｜11月13日｜城市与交通</h3>
-<p class="meta">旧词复习：Day 18（11/12）、Day 16（11/10）、Day 12（11/06）。</p>
+<section class="day" id="d19" hidden><h3 tabindex="-1">Day 19｜11月13日｜城市与交通</h3>
+<p class="meta">旧词复习：<a href="#d18">Day 18</a>、<a href="#d16">Day 16</a>、<a href="#d12">Day 12</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-19">识义 </label><input class="score" id="score-19" data-day="19" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 19 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="urbanization"><td><button type="button" class="word-toggle" data-word="urbanization" aria-pressed="false" aria-label="标记生词 urbanization">01</button></td><td class="word"><span class="star">★ </span>urbanization</td><td class="meaning" tabindex="0"><span>城市化</span></td><td class="phrase" tabindex="0"><span>rapid urbanization</span></td></tr>
@@ -627,8 +629,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="sewage"><td><button type="button" class="word-toggle" data-word="sewage" aria-pressed="false" aria-label="标记生词 sewage">19</button></td><td class="word">sewage</td><td class="meaning" tabindex="0"><span>污水</span></td><td class="phrase" tabindex="0"><span>sewage treatment</span></td></tr>
 <tr data-word-row="amenity"><td><button type="button" class="word-toggle" data-word="amenity" aria-pressed="false" aria-label="标记生词 amenity">20</button></td><td class="word">amenity</td><td class="meaning" tabindex="0"><span>便利设施（常用复数）</span></td><td class="phrase" tabindex="0"><span>public amenities</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>投资公共交通可以缓解拥堵，使通勤更加便利。<details><summary>完成后查看参考表达</summary><p>Investment in public transport can reduce congestion and make commuting more convenient.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d20"><h3>Day 20｜11月14日｜乡村与农业</h3>
-<p class="meta">旧词复习：Day 19（11/13）、Day 17（11/11）、Day 13（11/07）。</p>
+<section class="day" id="d20" hidden><h3 tabindex="-1">Day 20｜11月14日｜乡村与农业</h3>
+<p class="meta">旧词复习：<a href="#d19">Day 19</a>、<a href="#d17">Day 17</a>、<a href="#d13">Day 13</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-20">识义 </label><input class="score" id="score-20" data-day="20" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 20 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="rural"><td><button type="button" class="word-toggle" data-word="rural" aria-pressed="false" aria-label="标记生词 rural">01</button></td><td class="word"><span class="star">★ </span>rural</td><td class="meaning" tabindex="0"><span>乡村的</span></td><td class="phrase" tabindex="0"><span>rural development</span></td></tr>
@@ -652,8 +654,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="organic"><td><button type="button" class="word-toggle" data-word="organic" aria-pressed="false" aria-label="标记生词 organic">19</button></td><td class="word">organic</td><td class="meaning" tabindex="0"><span>有机的</span></td><td class="phrase" tabindex="0"><span>organic farming</span></td></tr>
 <tr data-word-row="vegetation"><td><button type="button" class="word-toggle" data-word="vegetation" aria-pressed="false" aria-label="标记生词 vegetation">20</button></td><td class="word">vegetation</td><td class="meaning" tabindex="0"><span>植被</span></td><td class="phrase" tabindex="0"><span>natural vegetation</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>更好的灌溉设施可以提高作物产量、改善乡村生计。<details><summary>完成后查看参考表达</summary><p>Better irrigation can increase crop yields and improve rural livelihoods.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d21"><h3>Day 21｜11月15日｜文化与传统①：保护和传承</h3>
-<p class="meta">旧词复习：Day 20（11/14）、Day 18（11/12）、Day 14（11/08）。</p>
+<section class="day" id="d21" hidden><h3 tabindex="-1">Day 21｜11月15日｜文化与传统①：保护和传承</h3>
+<p class="meta">旧词复习：<a href="#d20">Day 20</a>、<a href="#d18">Day 18</a>、<a href="#d14">Day 14</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-21">识义 </label><input class="score" id="score-21" data-day="21" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 21 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="heritage"><td><button type="button" class="word-toggle" data-word="heritage" aria-pressed="false" aria-label="标记生词 heritage">01</button></td><td class="word"><span class="star">★ </span>heritage</td><td class="meaning" tabindex="0"><span>遗产；传统</span></td><td class="phrase" tabindex="0"><span>cultural heritage</span></td></tr>
@@ -677,8 +679,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="revival"><td><button type="button" class="word-toggle" data-word="revival" aria-pressed="false" aria-label="标记生词 revival">19</button></td><td class="word">revival</td><td class="meaning" tabindex="0"><span>复兴；恢复</span></td><td class="phrase" tabindex="0"><span>a cultural revival</span></td></tr>
 <tr data-word-row="continuity"><td><button type="button" class="word-toggle" data-word="continuity" aria-pressed="false" aria-label="标记生词 continuity">20</button></td><td class="word">continuity</td><td class="meaning" tabindex="0"><span>连续性；延续</span></td><td class="phrase" tabindex="0"><span>cultural continuity</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>保护文化遗产有助于社区保持文化认同、传承传统。<details><summary>完成后查看参考表达</summary><p>Protecting cultural heritage helps communities maintain their identity and transmit traditions.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d22"><h3>Day 22｜11月16日｜文化与传统②：艺术和表达</h3>
-<p class="meta">旧词复习：Day 21（11/15）、Day 19（11/13）、Day 15（11/09）。</p>
+<section class="day" id="d22" hidden><h3 tabindex="-1">Day 22｜11月16日｜文化与传统②：艺术和表达</h3>
+<p class="meta">旧词复习：<a href="#d21">Day 21</a>、<a href="#d19">Day 19</a>、<a href="#d15">Day 15</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-22">识义 </label><input class="score" id="score-22" data-day="22" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 22 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="appreciate"><td><button type="button" class="word-toggle" data-word="appreciate" aria-pressed="false" aria-label="标记生词 appreciate">01</button></td><td class="word"><span class="star">★ </span>appreciate</td><td class="meaning" tabindex="0"><span>欣赏；感激；理解</span></td><td class="phrase" tabindex="0"><span>appreciate traditional art</span></td></tr>
@@ -702,8 +704,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="exhibition"><td><button type="button" class="word-toggle" data-word="exhibition" aria-pressed="false" aria-label="标记生词 exhibition">19</button></td><td class="word">exhibition</td><td class="meaning" tabindex="0"><span>展览</span></td><td class="phrase" tabindex="0"><span>an art exhibition</span></td></tr>
 <tr data-word-row="creativity"><td><button type="button" class="word-toggle" data-word="creativity" aria-pressed="false" aria-label="标记生词 creativity">20</button></td><td class="word">creativity</td><td class="meaning" tabindex="0"><span>创造力</span></td><td class="phrase" tabindex="0"><span>encourage creativity</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>博物馆展出独具特色的艺术作品，启发参观者欣赏文化多样性。<details><summary>完成后查看参考表达</summary><p>Museums exhibit distinctive works of art that inspire visitors to appreciate cultural diversity.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d23"><h3>Day 23｜11月17日｜旅游与历史地理</h3>
-<p class="meta">旧词复习：Day 22（11/16）、Day 20（11/14）、Day 16（11/10）。</p>
+<section class="day" id="d23" hidden><h3 tabindex="-1">Day 23｜11月17日｜旅游与历史地理</h3>
+<p class="meta">旧词复习：<a href="#d22">Day 22</a>、<a href="#d20">Day 20</a>、<a href="#d16">Day 16</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-23">识义 </label><input class="score" id="score-23" data-day="23" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 23 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="destination"><td><button type="button" class="word-toggle" data-word="destination" aria-pressed="false" aria-label="标记生词 destination">01</button></td><td class="word"><span class="star">★ </span>destination</td><td class="meaning" tabindex="0"><span>目的地</span></td><td class="phrase" tabindex="0"><span>a popular tourist destination</span></td></tr>
@@ -727,8 +729,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="souvenir"><td><button type="button" class="word-toggle" data-word="souvenir" aria-pressed="false" aria-label="标记生词 souvenir">19</button></td><td class="word">souvenir</td><td class="meaning" tabindex="0"><span>纪念品</span></td><td class="phrase" tabindex="0"><span>buy souvenirs</span></td></tr>
 <tr data-word-row="ecotourism"><td><button type="button" class="word-toggle" data-word="ecotourism" aria-pressed="false" aria-label="标记生词 ecotourism">20</button></td><td class="word">ecotourism</td><td class="meaning" tabindex="0"><span>生态旅游</span></td><td class="phrase" tabindex="0"><span>develop ecotourism</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>这座城市以壮丽的风景和丰富的历史遗产吸引游客。<details><summary>完成后查看参考表达</summary><p>The city attracts visitors with its magnificent landscape and rich historical heritage.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d24"><h3>Day 24｜11月18日｜发展与对外交流</h3>
-<p class="meta">旧词复习：Day 23（11/17）、Day 21（11/15）、Day 17（11/11）。</p>
+<section class="day" id="d24" hidden><h3 tabindex="-1">Day 24｜11月18日｜发展与对外交流</h3>
+<p class="meta">旧词复习：<a href="#d23">Day 23</a>、<a href="#d21">Day 21</a>、<a href="#d17">Day 17</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-24">识义 </label><input class="score" id="score-24" data-day="24" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 24 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="cooperation"><td><button type="button" class="word-toggle" data-word="cooperation" aria-pressed="false" aria-label="标记生词 cooperation">01</button></td><td class="word"><span class="star">★ </span>cooperation</td><td class="meaning" tabindex="0"><span>合作</span></td><td class="phrase" tabindex="0"><span>international cooperation</span></td></tr>
@@ -752,8 +754,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="logistics"><td><button type="button" class="word-toggle" data-word="logistics" aria-pressed="false" aria-label="标记生词 logistics">19</button></td><td class="word">logistics</td><td class="meaning" tabindex="0"><span>物流</span></td><td class="phrase" tabindex="0"><span>modern logistics</span></td></tr>
 <tr data-word-row="connectivity"><td><button type="button" class="word-toggle" data-word="connectivity" aria-pressed="false" aria-label="标记生词 connectivity">20</button></td><td class="word">connectivity</td><td class="meaning" tabindex="0"><span>互联互通；连通性</span></td><td class="phrase" tabindex="0"><span>regional connectivity</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>国际合作与文化交流可以促进相互理解。<details><summary>完成后查看参考表达</summary><p>International cooperation and cultural exchange can promote mutual understanding.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d25"><h3>Day 25｜11月19日｜媒体与信息</h3>
-<p class="meta">旧词复习：Day 24（11/18）、Day 22（11/16）、Day 18（11/12）。</p>
+<section class="day" id="d25" hidden><h3 tabindex="-1">Day 25｜11月19日｜媒体与信息</h3>
+<p class="meta">旧词复习：<a href="#d24">Day 24</a>、<a href="#d22">Day 22</a>、<a href="#d18">Day 18</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-25">识义 </label><input class="score" id="score-25" data-day="25" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 25 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="credible"><td><button type="button" class="word-toggle" data-word="credible" aria-pressed="false" aria-label="标记生词 credible">01</button></td><td class="word"><span class="star">★ </span>credible</td><td class="meaning" tabindex="0"><span>可信的</span></td><td class="phrase" tabindex="0"><span>credible sources</span></td></tr>
@@ -777,8 +779,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="impartial"><td><button type="button" class="word-toggle" data-word="impartial" aria-pressed="false" aria-label="标记生词 impartial">19</button></td><td class="word">impartial</td><td class="meaning" tabindex="0"><span>公正的；不偏不倚的</span></td><td class="phrase" tabindex="0"><span>impartial reporting</span></td></tr>
 <tr data-word-row="scrutiny"><td><button type="button" class="word-toggle" data-word="scrutiny" aria-pressed="false" aria-label="标记生词 scrutiny">20</button></td><td class="word">scrutiny</td><td class="meaning" tabindex="0"><span>仔细审查</span></td><td class="phrase" tabindex="0"><span>public scrutiny</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>有批判意识的读者会核查可信来源，区分证据和误导性说法。<details><summary>完成后查看参考表达</summary><p>Critical readers check credible sources and distinguish evidence from misleading claims.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d26"><h3>Day 26｜11月20日｜人际关系与沟通</h3>
-<p class="meta">旧词复习：Day 25（11/19）、Day 23（11/17）、Day 19（11/13）。</p>
+<section class="day" id="d26" hidden><h3 tabindex="-1">Day 26｜11月20日｜人际关系与沟通</h3>
+<p class="meta">旧词复习：<a href="#d25">Day 25</a>、<a href="#d23">Day 23</a>、<a href="#d19">Day 19</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-26">识义 </label><input class="score" id="score-26" data-day="26" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 26 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="communicate"><td><button type="button" class="word-toggle" data-word="communicate" aria-pressed="false" aria-label="标记生词 communicate">01</button></td><td class="word"><span class="star">★ </span>communicate</td><td class="meaning" tabindex="0"><span>交流；传达</span></td><td class="phrase" tabindex="0"><span>communicate effectively</span></td></tr>
@@ -802,8 +804,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="reconcile"><td><button type="button" class="word-toggle" data-word="reconcile" aria-pressed="false" aria-label="标记生词 reconcile">19</button></td><td class="word">reconcile</td><td class="meaning" tabindex="0"><span>使和解；调和</span></td><td class="phrase" tabindex="0"><span>reconcile different interests</span></td></tr>
 <tr data-word-row="rapport"><td><button type="button" class="word-toggle" data-word="rapport" aria-pressed="false" aria-label="标记生词 rapport">20</button></td><td class="word">rapport</td><td class="meaning" tabindex="0"><span>融洽关系</span></td><td class="phrase" tabindex="0"><span>establish rapport</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>建设性的沟通有助于人们解决冲突、建立信任。<details><summary>完成后查看参考表达</summary><p>Constructive communication helps people resolve conflicts and build trust.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d27"><h3>Day 27｜11月21日｜个人成长与时间管理</h3>
-<p class="meta">旧词复习：Day 26（11/20）、Day 24（11/18）、Day 20（11/14）。</p>
+<section class="day" id="d27" hidden><h3 tabindex="-1">Day 27｜11月21日｜个人成长与时间管理</h3>
+<p class="meta">旧词复习：<a href="#d26">Day 26</a>、<a href="#d24">Day 24</a>、<a href="#d20">Day 20</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-27">识义 </label><input class="score" id="score-27" data-day="27" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 27 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="pursue"><td><button type="button" class="word-toggle" data-word="pursue" aria-pressed="false" aria-label="标记生词 pursue">01</button></td><td class="word"><span class="star">★ </span>pursue</td><td class="meaning" tabindex="0"><span>追求；从事</span></td><td class="phrase" tabindex="0"><span>pursue a goal</span></td></tr>
@@ -827,8 +829,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="fulfilment"><td><button type="button" class="word-toggle" data-word="fulfilment" aria-pressed="false" aria-label="标记生词 fulfilment">19</button></td><td class="word">fulfilment</td><td class="meaning" tabindex="0"><span>满足感；履行</span></td><td class="phrase" tabindex="0"><span>personal fulfilment</span></td></tr>
 <tr data-word-row="aspire"><td><button type="button" class="word-toggle" data-word="aspire" aria-pressed="false" aria-label="标记生词 aspire">20</button></td><td class="word">aspire</td><td class="meaning" tabindex="0"><span>渴望；立志</span></td><td class="phrase" tabindex="0"><span>aspire to become a teacher</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>能够在挫折中坚持的人更有可能发挥自身潜力。<details><summary>完成后查看参考表达</summary><p>People who persist through setbacks are more likely to fulfil their potential.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d28"><h3>Day 28｜11月22日｜论证核心动词①：影响和改变</h3>
-<p class="meta">旧词复习：Day 27（11/21）、Day 25（11/19）、Day 21（11/15）。</p>
+<section class="day" id="d28" hidden><h3 tabindex="-1">Day 28｜11月22日｜论证核心动词①：影响和改变</h3>
+<p class="meta">旧词复习：<a href="#d27">Day 27</a>、<a href="#d25">Day 25</a>、<a href="#d21">Day 21</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-28">识义 </label><input class="score" id="score-28" data-day="28" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 28 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="affect"><td><button type="button" class="word-toggle" data-word="affect" aria-pressed="false" aria-label="标记生词 affect">01</button></td><td class="word"><span class="star">★ </span>affect</td><td class="meaning" tabindex="0"><span>影响</span></td><td class="phrase" tabindex="0"><span>affect daily life</span></td></tr>
@@ -852,8 +854,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="impede"><td><button type="button" class="word-toggle" data-word="impede" aria-pressed="false" aria-label="标记生词 impede">19</button></td><td class="word">impede</td><td class="meaning" tabindex="0"><span>妨碍；阻碍</span></td><td class="phrase" tabindex="0"><span>impede development</span></td></tr>
 <tr data-word-row="trigger"><td><button type="button" class="word-toggle" data-word="trigger" aria-pressed="false" aria-label="标记生词 trigger">20</button></td><td class="word">trigger</td><td class="meaning" tabindex="0"><span>引发</span></td><td class="phrase" tabindex="0"><span>trigger a debate</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>过度的压力可能削弱信心，而及时的支持可以缓解压力。<details><summary>完成后查看参考表达</summary><p>Excessive pressure may undermine confidence, while timely support can alleviate stress.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d29"><h3>Day 29｜11月23日｜论证核心动词②：解决和推进</h3>
-<p class="meta">旧词复习：Day 28（11/22）、Day 26（11/20）、Day 22（11/16）。</p>
+<section class="day" id="d29" hidden><h3 tabindex="-1">Day 29｜11月23日｜论证核心动词②：解决和推进</h3>
+<p class="meta">旧词复习：<a href="#d28">Day 28</a>、<a href="#d26">Day 26</a>、<a href="#d22">Day 22</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-29">识义 </label><input class="score" id="score-29" data-day="29" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 29 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="remedy"><td><button type="button" class="word-toggle" data-word="remedy" aria-pressed="false" aria-label="标记生词 remedy">01</button></td><td class="word"><span class="star">★ </span>remedy</td><td class="meaning" tabindex="0"><span>纠正；补救；补救办法</span></td><td class="phrase" tabindex="0"><span>remedy a problem</span></td></tr>
@@ -877,8 +879,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="safeguard"><td><button type="button" class="word-toggle" data-word="safeguard" aria-pressed="false" aria-label="标记生词 safeguard">19</button></td><td class="word">safeguard</td><td class="meaning" tabindex="0"><span>保护；保障</span></td><td class="phrase" tabindex="0"><span>safeguard public interests</span></td></tr>
 <tr data-word-row="eliminate"><td><button type="button" class="word-toggle" data-word="eliminate" aria-pressed="false" aria-label="标记生词 eliminate">20</button></td><td class="word">eliminate</td><td class="meaning" tabindex="0"><span>消除；淘汰</span></td><td class="phrase" tabindex="0"><span>eliminate barriers</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>切实可行的措施可以应对不平等，让更多人获得教育机会。<details><summary>完成后查看参考表达</summary><p>Practical measures can tackle inequality and enable more people to access education.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d30"><h3>Day 30｜11月24日｜阅读核心动词①：表达和判断</h3>
-<p class="meta">旧词复习：Day 29（11/23）、Day 27（11/21）、Day 23（11/17）。</p>
+<section class="day" id="d30" hidden><h3 tabindex="-1">Day 30｜11月24日｜阅读核心动词①：表达和判断</h3>
+<p class="meta">旧词复习：<a href="#d29">Day 29</a>、<a href="#d27">Day 27</a>、<a href="#d23">Day 23</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-30">识义 </label><input class="score" id="score-30" data-day="30" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 30 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="acknowledge"><td><button type="button" class="word-toggle" data-word="acknowledge" aria-pressed="false" aria-label="标记生词 acknowledge">01</button></td><td class="word"><span class="star">★ </span>acknowledge</td><td class="meaning" tabindex="0"><span>承认；致谢</span></td><td class="phrase" tabindex="0"><span>acknowledge the limitations</span></td></tr>
@@ -902,8 +904,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="refute"><td><button type="button" class="word-toggle" data-word="refute" aria-pressed="false" aria-label="标记生词 refute">19</button></td><td class="word">refute</td><td class="meaning" tabindex="0"><span>反驳；驳斥</span></td><td class="phrase" tabindex="0"><span>refute an argument</span></td></tr>
 <tr data-word-row="reject"><td><button type="button" class="word-toggle" data-word="reject" aria-pressed="false" aria-label="标记生词 reject">20</button></td><td class="word">reject</td><td class="meaning" tabindex="0"><span>拒绝接受；否定</span></td><td class="phrase" tabindex="0"><span>reject a proposal</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>这些发现凸显了风险，但不能证明所有拟议的限制都合理。<details><summary>完成后查看参考表达</summary><p>The findings highlight the risks, but they do not justify every proposed restriction.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d31"><h3>Day 31｜11月25日｜阅读核心动词②：过程和关系</h3>
-<p class="meta">旧词复习：Day 30（11/24）、Day 28（11/22）、Day 24（11/18）。</p>
+<section class="day" id="d31" hidden><h3 tabindex="-1">Day 31｜11月25日｜阅读核心动词②：过程和关系</h3>
+<p class="meta">旧词复习：<a href="#d30">Day 30</a>、<a href="#d28">Day 28</a>、<a href="#d24">Day 24</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-31">识义 </label><input class="score" id="score-31" data-day="31" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 31 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="involve"><td><button type="button" class="word-toggle" data-word="involve" aria-pressed="false" aria-label="标记生词 involve">01</button></td><td class="word"><span class="star">★ </span>involve</td><td class="meaning" tabindex="0"><span>涉及；包含；使参与</span></td><td class="phrase" tabindex="0"><span>involve local residents</span></td></tr>
@@ -927,8 +929,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="correspond"><td><button type="button" class="word-toggle" data-word="correspond" aria-pressed="false" aria-label="标记生词 correspond">19</button></td><td class="word">correspond</td><td class="meaning" tabindex="0"><span>相符；对应；通信</span></td><td class="phrase" tabindex="0"><span>correspond to a category</span></td></tr>
 <tr data-word-row="interact"><td><button type="button" class="word-toggle" data-word="interact" aria-pressed="false" aria-label="标记生词 interact">20</button></td><td class="word">interact</td><td class="meaning" tabindex="0"><span>相互作用；交流</span></td><td class="phrase" tabindex="0"><span>interact with others</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>有效的改革需要规划，也涉及可能带来额外成本的变化。<details><summary>完成后查看参考表达</summary><p>Effective reform requires planning and involves changes that may entail additional costs.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d32"><h3>Day 32｜11月26日｜评价与态度形容词</h3>
-<p class="meta">旧词复习：Day 31（11/25）、Day 29（11/23）、Day 25（11/19）。</p>
+<section class="day" id="d32" hidden><h3 tabindex="-1">Day 32｜11月26日｜评价与态度形容词</h3>
+<p class="meta">旧词复习：<a href="#d31">Day 31</a>、<a href="#d29">Day 29</a>、<a href="#d25">Day 25</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-32">识义 </label><input class="score" id="score-32" data-day="32" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 32 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="feasible"><td><button type="button" class="word-toggle" data-word="feasible" aria-pressed="false" aria-label="标记生词 feasible">01</button></td><td class="word"><span class="star">★ </span>feasible</td><td class="meaning" tabindex="0"><span>可行的</span></td><td class="phrase" tabindex="0"><span>a feasible solution</span></td></tr>
@@ -952,8 +954,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="trivial"><td><button type="button" class="word-toggle" data-word="trivial" aria-pressed="false" aria-label="标记生词 trivial">19</button></td><td class="word">trivial</td><td class="meaning" tabindex="0"><span>琐碎的；不重要的</span></td><td class="phrase" tabindex="0"><span>a trivial detail</span></td></tr>
 <tr data-word-row="inherent"><td><button type="button" class="word-toggle" data-word="inherent" aria-pressed="false" aria-label="标记生词 inherent">20</button></td><td class="word">inherent</td><td class="meaning" tabindex="0"><span>固有的</span></td><td class="phrase" tabindex="0"><span>inherent limitations</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>可行的解决方案应适合当地条件，并回应基本需求。<details><summary>完成后查看参考表达</summary><p>A feasible solution should be appropriate to local conditions and address essential needs.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d33"><h3>Day 33｜11月27日｜趋势、程度与比较</h3>
-<p class="meta">旧词复习：Day 32（11/26）、Day 30（11/24）、Day 26（11/20）。</p>
+<section class="day" id="d33" hidden><h3 tabindex="-1">Day 33｜11月27日｜趋势、程度与比较</h3>
+<p class="meta">旧词复习：<a href="#d32">Day 32</a>、<a href="#d30">Day 30</a>、<a href="#d26">Day 26</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-33">识义 </label><input class="score" id="score-33" data-day="33" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 33 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="trend"><td><button type="button" class="word-toggle" data-word="trend" aria-pressed="false" aria-label="标记生词 trend">01</button></td><td class="word"><span class="star">★ </span>trend</td><td class="meaning" tabindex="0"><span>趋势</span></td><td class="phrase" tabindex="0"><span>a long-term trend</span></td></tr>
@@ -977,8 +979,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="predominantly"><td><button type="button" class="word-toggle" data-word="predominantly" aria-pressed="false" aria-label="标记生词 predominantly">19</button></td><td class="word">predominantly</td><td class="meaning" tabindex="0"><span>主要地；占主导地位地</span></td><td class="phrase" tabindex="0"><span>predominantly rural</span></td></tr>
 <tr data-word-row="increasingly"><td><button type="button" class="word-toggle" data-word="increasingly" aria-pressed="false" aria-label="标记生词 increasingly">20</button></td><td class="word">increasingly</td><td class="meaning" tabindex="0"><span>越来越</span></td><td class="phrase" tabindex="0"><span>increasingly important</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>数据显示参与度逐渐上升，不同地区之间存在较大差异。<details><summary>完成后查看参考表达</summary><p>The data show a gradual increase in participation and considerable differences between regions.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d34"><h3>Day 34｜11月28日｜逻辑衔接与论证名词</h3>
-<p class="meta">旧词复习：Day 33（11/27）、Day 31（11/25）、Day 27（11/21）。</p>
+<section class="day" id="d34" hidden><h3 tabindex="-1">Day 34｜11月28日｜逻辑衔接与论证名词</h3>
+<p class="meta">旧词复习：<a href="#d33">Day 33</a>、<a href="#d31">Day 31</a>、<a href="#d27">Day 27</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-34">识义 </label><input class="score" id="score-34" data-day="34" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 34 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="therefore"><td><button type="button" class="word-toggle" data-word="therefore" aria-pressed="false" aria-label="标记生词 therefore">01</button></td><td class="word"><span class="star">★ </span>therefore</td><td class="meaning" tabindex="0"><span>因此</span></td><td class="phrase" tabindex="0"><span>therefore require further study</span></td></tr>
@@ -1002,8 +1004,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="paradox"><td><button type="button" class="word-toggle" data-word="paradox" aria-pressed="false" aria-label="标记生词 paradox">19</button></td><td class="word">paradox</td><td class="meaning" tabindex="0"><span>悖论；矛盾现象</span></td><td class="phrase" tabindex="0"><span>an apparent paradox</span></td></tr>
 <tr data-word-row="dilemma"><td><button type="button" class="word-toggle" data-word="dilemma" aria-pressed="false" aria-label="标记生词 dilemma">20</button></td><td class="word">dilemma</td><td class="meaning" tabindex="0"><span>两难处境</span></td><td class="phrase" tabindex="0"><span>face a dilemma</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>这项政策可能降低成本；然而，其长期影响仍需认真评估。<details><summary>完成后查看参考表达</summary><p>The policy may reduce costs; nevertheless, its long-term implications require careful assessment.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d35"><h3>Day 35｜11月29日｜听力场景①：校园与研究</h3>
-<p class="meta">旧词复习：Day 34（11/28）、Day 32（11/26）、Day 28（11/22）。</p>
+<section class="day" id="d35" hidden><h3 tabindex="-1">Day 35｜11月29日｜听力场景①：校园与研究</h3>
+<p class="meta">旧词复习：<a href="#d34">Day 34</a>、<a href="#d32">Day 32</a>、<a href="#d28">Day 28</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-35">识义 </label><input class="score" id="score-35" data-day="35" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 35 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="appointment"><td><button type="button" class="word-toggle" data-word="appointment" aria-pressed="false" aria-label="标记生词 appointment">01</button></td><td class="word"><span class="star">★ </span>appointment</td><td class="meaning" tabindex="0"><span>预约；任命</span></td><td class="phrase" tabindex="0"><span>make an appointment</span></td></tr>
@@ -1027,8 +1029,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="conference"><td><button type="button" class="word-toggle" data-word="conference" aria-pressed="false" aria-label="标记生词 conference">19</button></td><td class="word">conference</td><td class="meaning" tabindex="0"><span>会议</span></td><td class="phrase" tabindex="0"><span>an academic conference</span></td></tr>
 <tr data-word-row="workshop"><td><button type="button" class="word-toggle" data-word="workshop" aria-pressed="false" aria-label="标记生词 workshop">20</button></td><td class="word">workshop</td><td class="meaning" tabindex="0"><span>研习班；车间</span></td><td class="phrase" tabindex="0"><span>a writing workshop</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>申请延期前，请预约导师，弄清任务要求。<details><summary>完成后查看参考表达</summary><p>Please make an appointment with your advisor to clarify the requirements before requesting an extension.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d36"><h3>Day 36｜11月30日｜听力场景②：商业和日常事务</h3>
-<p class="meta">旧词复习：Day 35（11/29）、Day 33（11/27）、Day 29（11/23）。</p>
+<section class="day" id="d36" hidden><h3 tabindex="-1">Day 36｜11月30日｜听力场景②：商业和日常事务</h3>
+<p class="meta">旧词复习：<a href="#d35">Day 35</a>、<a href="#d33">Day 33</a>、<a href="#d29">Day 29</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-36">识义 </label><input class="score" id="score-36" data-day="36" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 36 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="reservation"><td><button type="button" class="word-toggle" data-word="reservation" aria-pressed="false" aria-label="标记生词 reservation">01</button></td><td class="word"><span class="star">★ </span>reservation</td><td class="meaning" tabindex="0"><span>预订；保留意见</span></td><td class="phrase" tabindex="0"><span>make a reservation</span></td></tr>
@@ -1052,8 +1054,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="defective"><td><button type="button" class="word-toggle" data-word="defective" aria-pressed="false" aria-label="标记生词 defective">19</button></td><td class="word">defective</td><td class="meaning" tabindex="0"><span>有缺陷的</span></td><td class="phrase" tabindex="0"><span>a defective product</span></td></tr>
 <tr data-word-row="replacement"><td><button type="button" class="word-toggle" data-word="replacement" aria-pressed="false" aria-label="标记生词 replacement">20</button></td><td class="word">replacement</td><td class="meaning" tabindex="0"><span>替换；替代品</span></td><td class="phrase" tabindex="0"><span>request a replacement</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>请确认预订，如有变动请通知我们，以免造成不便。<details><summary>完成后查看参考表达</summary><p>Please confirm your reservation and notify us of any changes to avoid inconvenience.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d37"><h3>Day 37｜12月1日｜自然科学与生命</h3>
-<p class="meta">旧词复习：Day 36（11/30）、Day 34（11/28）、Day 30（11/24）。</p>
+<section class="day" id="d37" hidden><h3 tabindex="-1">Day 37｜12月1日｜自然科学与生命</h3>
+<p class="meta">旧词复习：<a href="#d36">Day 36</a>、<a href="#d34">Day 34</a>、<a href="#d30">Day 30</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-37">识义 </label><input class="score" id="score-37" data-day="37" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 37 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="species"><td><button type="button" class="word-toggle" data-word="species" aria-pressed="false" aria-label="标记生词 species">01</button></td><td class="word"><span class="star">★ </span>species</td><td class="meaning" tabindex="0"><span>物种（单复数同形）</span></td><td class="phrase" tabindex="0"><span>endangered species</span></td></tr>
@@ -1077,8 +1079,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="prey"><td><button type="button" class="word-toggle" data-word="prey" aria-pressed="false" aria-label="标记生词 prey">19</button></td><td class="word">prey</td><td class="meaning" tabindex="0"><span>猎物；捕食</span></td><td class="phrase" tabindex="0"><span>birds of prey</span></td></tr>
 <tr data-word-row="instinct"><td><button type="button" class="word-toggle" data-word="instinct" aria-pressed="false" aria-label="标记生词 instinct">20</button></td><td class="word">instinct</td><td class="meaning" tabindex="0"><span>本能</span></td><td class="phrase" tabindex="0"><span>a survival instinct</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>适应有助于物种存活，而遗传变异为进化提供基础。<details><summary>完成后查看参考表达</summary><p>Adaptation helps species survive, while genetic variation provides a basis for evolution.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d38"><h3>Day 38｜12月2日｜认知、记忆与行为</h3>
-<p class="meta">旧词复习：Day 37（12/01）、Day 35（11/29）、Day 31（11/25）。</p>
+<section class="day" id="d38" hidden><h3 tabindex="-1">Day 38｜12月2日｜认知、记忆与行为</h3>
+<p class="meta">旧词复习：<a href="#d37">Day 37</a>、<a href="#d35">Day 35</a>、<a href="#d31">Day 31</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-38">识义 </label><input class="score" id="score-38" data-day="38" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 38 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="perception"><td><button type="button" class="word-toggle" data-word="perception" aria-pressed="false" aria-label="标记生词 perception">01</button></td><td class="word"><span class="star">★ </span>perception</td><td class="meaning" tabindex="0"><span>感知；看法</span></td><td class="phrase" tabindex="0"><span>public perception</span></td></tr>
@@ -1102,8 +1104,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="fatigue"><td><button type="button" class="word-toggle" data-word="fatigue" aria-pressed="false" aria-label="标记生词 fatigue">19</button></td><td class="word">fatigue</td><td class="meaning" tabindex="0"><span>疲劳</span></td><td class="phrase" tabindex="0"><span>mental fatigue</span></td></tr>
 <tr data-word-row="alertness"><td><button type="button" class="word-toggle" data-word="alertness" aria-pressed="false" aria-label="标记生词 alertness">20</button></td><td class="word">alertness</td><td class="meaning" tabindex="0"><span>警觉；清醒</span></td><td class="phrase" tabindex="0"><span>maintain alertness</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>睡眠影响认知能力，并有助于人们保持注意力、回忆信息。<details><summary>完成后查看参考表达</summary><p>Sleep affects cognitive ability and helps people sustain attention and recall information.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d39"><h3>Day 39｜12月3日｜公共政策与法律</h3>
-<p class="meta">旧词复习：Day 38（12/02）、Day 36（11/30）、Day 32（11/26）。</p>
+<section class="day" id="d39" hidden><h3 tabindex="-1">Day 39｜12月3日｜公共政策与法律</h3>
+<p class="meta">旧词复习：<a href="#d38">Day 38</a>、<a href="#d36">Day 36</a>、<a href="#d32">Day 32</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-39">识义 </label><input class="score" id="score-39" data-day="39" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 39 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="policy"><td><button type="button" class="word-toggle" data-word="policy" aria-pressed="false" aria-label="标记生词 policy">01</button></td><td class="word"><span class="star">★ </span>policy</td><td class="meaning" tabindex="0"><span>政策</span></td><td class="phrase" tabindex="0"><span>public policy</span></td></tr>
@@ -1127,8 +1129,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="bureaucracy"><td><button type="button" class="word-toggle" data-word="bureaucracy" aria-pressed="false" aria-label="标记生词 bureaucracy">19</button></td><td class="word">bureaucracy</td><td class="meaning" tabindex="0"><span>官僚体制；官僚作风</span></td><td class="phrase" tabindex="0"><span>reduce bureaucracy</span></td></tr>
 <tr data-word-row="petition"><td><button type="button" class="word-toggle" data-word="petition" aria-pressed="false" aria-label="标记生词 petition">20</button></td><td class="word">petition</td><td class="meaning" tabindex="0"><span>请愿；请愿书</span></td><td class="phrase" tabindex="0"><span>sign a petition</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>公共政策应保护个人权利，同时确保法律义务得到履行。<details><summary>完成后查看参考表达</summary><p>Public policy should protect individual rights while ensuring that legal obligations are met.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d40"><h3>Day 40｜12月4日｜风险、危机与应对</h3>
-<p class="meta">旧词复习：Day 39（12/03）、Day 37（12/01）、Day 33（11/27）。</p>
+<section class="day" id="d40" hidden><h3 tabindex="-1">Day 40｜12月4日｜风险、危机与应对</h3>
+<p class="meta">旧词复习：<a href="#d39">Day 39</a>、<a href="#d37">Day 37</a>、<a href="#d33">Day 33</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-40">识义 </label><input class="score" id="score-40" data-day="40" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 40 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="risk"><td><button type="button" class="word-toggle" data-word="risk" aria-pressed="false" aria-label="标记生词 risk">01</button></td><td class="word"><span class="star">★ </span>risk</td><td class="meaning" tabindex="0"><span>风险；冒……风险</span></td><td class="phrase" tabindex="0"><span>assess a risk</span></td></tr>
@@ -1152,8 +1154,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="susceptible"><td><button type="button" class="word-toggle" data-word="susceptible" aria-pressed="false" aria-label="标记生词 susceptible">19</button></td><td class="word">susceptible</td><td class="meaning" tabindex="0"><span>易受影响的</span></td><td class="phrase" tabindex="0"><span>susceptible to disease</span></td></tr>
 <tr data-word-row="precautionary"><td><button type="button" class="word-toggle" data-word="precautionary" aria-pressed="false" aria-label="标记生词 precautionary">20</button></td><td class="word">precautionary</td><td class="meaning" tabindex="0"><span>预防性的</span></td><td class="phrase" tabindex="0"><span>precautionary measures</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>社区应采取预防措施，制定应急预案以应对紧急情况。<details><summary>完成后查看参考表达</summary><p>Communities should take precautions and prepare contingency plans to respond to emergencies.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d41"><h3>Day 41｜12月5日｜熟词生义：阅读中的常见转换</h3>
-<p class="meta">旧词复习：Day 40（12/04）、Day 38（12/02）、Day 34（11/28）。</p>
+<section class="day" id="d41" hidden><h3 tabindex="-1">Day 41｜12月5日｜熟词生义：阅读中的常见转换</h3>
+<p class="meta">旧词复习：<a href="#d40">Day 40</a>、<a href="#d38">Day 38</a>、<a href="#d34">Day 34</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-41">识义 </label><input class="score" id="score-41" data-day="41" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 41 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="account"><td><button type="button" class="word-toggle" data-word="account" aria-pressed="false" aria-label="标记生词 account">01</button></td><td class="word"><span class="star">★ </span>account</td><td class="meaning" tabindex="0"><span>解释；账户；叙述</span></td><td class="phrase" tabindex="0"><span>account for the difference</span></td></tr>
@@ -1177,8 +1179,8 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="scale"><td><button type="button" class="word-toggle" data-word="scale" aria-pressed="false" aria-label="标记生词 scale">19</button></td><td class="word">scale</td><td class="meaning" tabindex="0"><span>规模；刻度；等级</span></td><td class="phrase" tabindex="0"><span>on a large scale</span></td></tr>
 <tr data-word-row="range"><td><button type="button" class="word-toggle" data-word="range" aria-pressed="false" aria-label="标记生词 range">20</button></td><td class="word">range</td><td class="meaning" tabindex="0"><span>范围；一系列；变化</span></td><td class="phrase" tabindex="0"><span>range from A to B</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>可靠的解释应说明证据，而不是仅重复熟悉的说法。<details><summary>完成后查看参考表达</summary><p>A sound explanation should account for the evidence rather than merely repeat a familiar claim.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d42"><h3>Day 42｜12月6日｜抽象名词与易混词：考前收束</h3>
-<p class="meta">旧词复习：Day 41（12/05）、Day 39（12/03）、Day 35（11/29）。</p>
+<section class="day" id="d42" hidden><h3 tabindex="-1">Day 42｜12月6日｜抽象名词与易混词：考前收束</h3>
+<p class="meta">旧词复习：<a href="#d41">Day 41</a>、<a href="#d39">Day 39</a>、<a href="#d35">Day 35</a>。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>
 <p class="meta">□ 新词　□ 旧词　□ 5词默写　□ 中译英　｜　<label for="score-42">识义 </label><input class="score" id="score-42" data-day="42" type="number" min="0" max="20" step="1" inputmode="numeric" placeholder="—" aria-label="Day 42 识义分数，0到20分"> /20</p>
 <div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>
 <tr data-word-row="factor"><td><button type="button" class="word-toggle" data-word="factor" aria-pressed="false" aria-label="标记生词 factor">01</button></td><td class="word"><span class="star">★ </span>factor</td><td class="meaning" tabindex="0"><span>因素</span></td><td class="phrase" tabindex="0"><span>a key factor</span></td></tr>
@@ -1202,7 +1204,7 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr data-word-row="procedure"><td><button type="button" class="word-toggle" data-word="procedure" aria-pressed="false" aria-label="标记生词 procedure">19</button></td><td class="word">procedure</td><td class="meaning" tabindex="0"><span>程序；步骤</span></td><td class="phrase" tabindex="0"><span>a standard procedure</span></td></tr>
 <tr data-word-row="process"><td><button type="button" class="word-toggle" data-word="process" aria-pressed="false" aria-label="标记生词 process">20</button></td><td class="word">process</td><td class="meaning" tabindex="0"><span>过程；处理</span></td><td class="phrase" tabindex="0"><span>the learning process</span></td></tr>
 </tbody></table></div><div class="quiz"><strong>中译英：</strong>有效的策略会考虑背景、可用资源和主要约束。<details><summary>完成后查看参考表达</summary><p>An effective strategy considers the context, available resources and the principal constraints.</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>
-<section class="day" id="d43"><h3>Day 43｜12月7日｜集中复习</h3><p><strong>教育、研究、科技、职场与经济基础</strong></p><p>范围：Day 01—09，共180词；没有新词。</p>
+<section class="day" id="d43" hidden><h3 tabindex="-1">Day 43｜12月7日｜集中复习</h3><p><strong>教育、研究、科技、职场与经济基础</strong></p><p>范围：Day 01—09，共180词；没有新词。</p>
 <p>15分钟：遮住释义快速检查本批词，每词约5秒。10分钟：专攻最不熟的20词。10分钟：从本批★词中抽10词默写搭配，重译2句旧练习。</p><ul>
 <li><a href="#d1">Day 01：学习与教育①：能力和学习过程</a></li>
 <li><a href="#d2">Day 02：学习与教育②：教学和机会</a></li>
@@ -1214,7 +1216,7 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <li><a href="#d8">Day 08：工作与职业②：劳动和组织</a></li>
 <li><a href="#d9">Day 09：经济与消费①：市场和增长</a></li>
 </ul><p>□ 快测　□ 20个弱词　□ 10词输出　□ 2句重译</p><p>仍遗忘的词：________________________________________</p></section>
-<section class="day" id="d44"><h3>Day 44｜12月8日｜集中复习</h3><p><strong>消费、环境、能源、健康、人口与公平</strong></p><p>范围：Day 10—18，共180词；没有新词。</p>
+<section class="day" id="d44" hidden><h3 tabindex="-1">Day 44｜12月8日｜集中复习</h3><p><strong>消费、环境、能源、健康、人口与公平</strong></p><p>范围：Day 10—18，共180词；没有新词。</p>
 <p>15分钟：遮住释义快速检查本批词，每词约5秒。10分钟：专攻最不熟的20词。10分钟：从本批★词中抽10词默写搭配，重译2句旧练习。</p><ul>
 <li><a href="#d10">Day 10：经济与消费②：购物和决策</a></li>
 <li><a href="#d11">Day 11：环境与气候①：问题和影响</a></li>
@@ -1226,7 +1228,7 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <li><a href="#d17">Day 17：人口与老龄化</a></li>
 <li><a href="#d18">Day 18：社会公平与公共服务</a></li>
 </ul><p>□ 快测　□ 20个弱词　□ 10词输出　□ 2句重译</p><p>仍遗忘的词：________________________________________</p></section>
-<section class="day" id="d45"><h3>Day 45｜12月9日｜集中复习</h3><p><strong>城市、农业、文化、交流、媒体与沟通</strong></p><p>范围：Day 19—26，共160词；没有新词。</p>
+<section class="day" id="d45" hidden><h3 tabindex="-1">Day 45｜12月9日｜集中复习</h3><p><strong>城市、农业、文化、交流、媒体与沟通</strong></p><p>范围：Day 19—26，共160词；没有新词。</p>
 <p>15分钟：遮住释义快速检查本批词，每词约5秒。10分钟：专攻最不熟的20词。10分钟：从本批★词中抽10词默写搭配，重译2句旧练习。</p><ul>
 <li><a href="#d19">Day 19：城市与交通</a></li>
 <li><a href="#d20">Day 20：乡村与农业</a></li>
@@ -1237,7 +1239,7 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <li><a href="#d25">Day 25：媒体与信息</a></li>
 <li><a href="#d26">Day 26：人际关系与沟通</a></li>
 </ul><p>□ 快测　□ 20个弱词　□ 10词输出　□ 2句重译</p><p>仍遗忘的词：________________________________________</p></section>
-<section class="day" id="d46"><h3>Day 46｜12月10日｜集中复习</h3><p><strong>个人成长、论证动词、态度、趋势与衔接</strong></p><p>范围：Day 27—34，共160词；没有新词。</p>
+<section class="day" id="d46" hidden><h3 tabindex="-1">Day 46｜12月10日｜集中复习</h3><p><strong>个人成长、论证动词、态度、趋势与衔接</strong></p><p>范围：Day 27—34，共160词；没有新词。</p>
 <p>15分钟：遮住释义快速检查本批词，每词约5秒。10分钟：专攻最不熟的20词。10分钟：从本批★词中抽10词默写搭配，重译2句旧练习。</p><ul>
 <li><a href="#d27">Day 27：个人成长与时间管理</a></li>
 <li><a href="#d28">Day 28：论证核心动词①：影响和改变</a></li>
@@ -1248,7 +1250,7 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <li><a href="#d33">Day 33：趋势、程度与比较</a></li>
 <li><a href="#d34">Day 34：逻辑衔接与论证名词</a></li>
 </ul><p>□ 快测　□ 20个弱词　□ 10词输出　□ 2句重译</p><p>仍遗忘的词：________________________________________</p></section>
-<section class="day" id="d47"><h3>Day 47｜12月11日｜集中复习</h3><p><strong>听力场景、科学、认知、政策、风险与易混词</strong></p><p>范围：Day 35—42，共160词；没有新词。</p>
+<section class="day" id="d47" hidden><h3 tabindex="-1">Day 47｜12月11日｜集中复习</h3><p><strong>听力场景、科学、认知、政策、风险与易混词</strong></p><p>范围：Day 35—42，共160词；没有新词。</p>
 <p>15分钟：遮住释义快速检查本批词，每词约5秒。10分钟：专攻最不熟的20词。10分钟：从本批★词中抽10词默写搭配，重译2句旧练习。</p><ul>
 <li><a href="#d35">Day 35：听力场景①：校园与研究</a></li>
 <li><a href="#d36">Day 36：听力场景②：商业和日常事务</a></li>
@@ -1259,7 +1261,7 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <li><a href="#d41">Day 41：熟词生义：阅读中的常见转换</a></li>
 <li><a href="#d42">Day 42：抽象名词与易混词：考前收束</a></li>
 </ul><p>□ 快测　□ 20个弱词　□ 10词输出　□ 2句重译</p><p>仍遗忘的词：________________________________________</p></section>
-<section class="day" id="d48"><h3>Day 48｜12月12日｜考试日</h3><p>只用5—10分钟回顾以下10个熟悉搭配及个人易错词，不加新词。</p><ul>
+<section class="day" id="d48" hidden><h3 tabindex="-1">Day 48｜12月12日｜考试日</h3><p>只用5—10分钟回顾以下10个熟悉搭配及个人易错词，不加新词。</p><ul>
 <li>acquire knowledge</li>
 <li>access to education</li>
 <li>allocate resources</li>
@@ -1270,7 +1272,7 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <li>account for the difference</li>
 <li>to some extent</li>
 <li>from a different perspective</li>
-</ul></section><h2>易混词和使用提醒</h2><ul>
+</ul></section><nav id="day-switch" class="day-switch" aria-label="切换学习日" hidden><a id="previous-day" href="#d1">← 前一天</a><a href="#calendar">返回日历</a><a id="next-day" href="#d2">后一天 →</a></nav><section id="resources" hidden><h2>易混词和使用提醒</h2><ul>
 <li><strong>affect / effect：</strong>affect通常作动词“影响”；effect通常作名词“影响、结果”，也可作动词“实现”，如effect change。</li>
 <li><strong>economic / economical：</strong>economic指“经济的”；economical指“节约的、经济实惠的”。后者为拓展词，不计入840词。</li>
 <li><strong>principal / principle：</strong>principal：主要的、校长、本金；principle：原则、原理。</li>
@@ -1337,11 +1339,11 @@ body.test .phrase span{visibility:hidden}body.test .phrase:hover span,body.test 
 <tr><td>____</td><td>____________</td><td>____________________</td><td>□　□　□</td></tr>
 <tr><td>____</td><td>____________</td><td>____________________</td><td>□　□　□</td></tr>
 <tr><td>____</td><td>____________</td><td>____________________</td><td>□　□　□</td></tr>
-</tbody></table></div><p class="muted">学习资料编写日期：2026年10月26日。词汇训练服务于理解和表达，不以背词数量代替真题检验。</p></main><script>
+</tbody></table></div><p class="muted">学习资料编写日期：2026年10月26日。词汇训练服务于理解和表达，不以背词数量代替真题检验。</p></section></main><script>
 document.getElementById('mask').addEventListener('click',function(){const on=document.body.classList.toggle('test');this.setAttribute('aria-pressed',String(on));this.textContent=on?'显示释义和搭配':'遮住释义和搭配 · 自测';});
 document.getElementById('print').addEventListener('click',()=>window.print());
-document.getElementById('jump').addEventListener('change',function(){if(this.value)document.getElementById(this.value).scrollIntoView({behavior:'smooth'});});
-document.getElementById('back-calendar').addEventListener('click',()=>document.getElementById('calendar').scrollIntoView({behavior:'smooth'}));
+document.getElementById('jump').addEventListener('change',function(){if(this.value)location.hash=this.value;});
+document.getElementById('back-calendar').addEventListener('click',()=>{location.hash='calendar';});
 const monthTabs = Array.from(document.querySelectorAll('[role="tab"][data-month]'));
 function showMonth(month) {
   monthTabs.forEach(tab => {
@@ -1367,9 +1369,36 @@ const todayISO = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2
 const todayCell = document.querySelector(`[data-date="${todayISO}"]`);
 if(todayCell) {todayCell.classList.add('today');todayCell.setAttribute('aria-current','date');showMonth(today.getMonth()+1);}
 function syncCalendarSelection() {
+  const match = /^#d([1-9]|[1-3][0-9]|4[0-8])$/.exec(location.hash);
+  const day = match ? Number(match[1]) : null;
+  const view = day ? 'day' : (['#vocabulary','#guide','#resources'].includes(location.hash) ? location.hash.slice(1) : 'calendar');
+  document.body.dataset.view = view;
+  document.querySelectorAll('.day').forEach(section=>{section.hidden=section.id!==`d${day}`;});
+  ['calendar','vocabulary','guide','resources'].forEach(id=>{document.getElementById(id).hidden=view!==id;});
+  document.getElementById('about').hidden=view!=='guide';
+  document.getElementById('guide').open=view==='guide';
+  document.getElementById('study-tools').hidden=!['day','vocabulary'].includes(view);
+  document.getElementById('jump').hidden=view!=='day';
+  document.getElementById('jump').value=day ? `d${day}` : '';
+  document.getElementById('day-switch').hidden=!day;
+  if(day) {
+    const previous=document.getElementById('previous-day'),next=document.getElementById('next-day');
+    previous.hidden=day===1;previous.href=`#d${day-1}`;
+    next.hidden=day===48;next.href=`#d${day+1}`;
+    document.title=document.querySelector(`#d${day} h3`).textContent+'｜六级词汇';
+  } else document.title='六级词汇｜'+({'calendar':'学习日历','vocabulary':'我的生词','guide':'学习方法','resources':'参考资料'}[view]);
+  document.querySelectorAll('[data-view-link]').forEach(link=>{
+    const active=link.dataset.viewLink===view || (view==='day'&&link.dataset.viewLink==='calendar') || (view==='resources'&&link.dataset.viewLink==='guide');
+    link.classList.toggle('active',active);
+    if(active)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');
+  });
   const cell = Array.from(document.querySelectorAll('[data-cal-day]')).find(link=>link.getAttribute('href')===location.hash);
   document.querySelectorAll('.cal-date.selected').forEach(link=>link.classList.remove('selected'));
   if(cell) {cell.classList.add('selected');showMonth(Number(cell.dataset.date.slice(5,7)));}
+  requestAnimationFrame(()=>{
+    if(day)document.querySelector(`#d${day} h3`).focus({preventScroll:true});
+    window.scrollTo({top:0,behavior:'instant'});
+  });
 }
 window.addEventListener('hashchange',syncCalendarSelection);syncCalendarSelection();
 
