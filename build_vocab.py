@@ -1116,8 +1116,8 @@ body.test .phrase span{{visibility:hidden}}body.test .phrase:hover span,body.tes
 @media print{{main{{padding:0}}.hero-stats,.calendar,.about,.guide{{display:none}}.day,.vocab-panel{{border:0;background:white}}body{{background:white}}}}
  .site-nav{{display:flex;align-items:center;gap:8px;padding:12px 0;position:sticky;top:0;background:#f3f4eff5;backdrop-filter:blur(12px);z-index:3}}.site-nav a{{padding:8px 15px;border-radius:9px;text-decoration:none;color:#78847c;font-size:13px}}.site-nav a.active{{background:#e2ecdf;color:#315f45;font-weight:600}}body:not([data-view="calendar"]) .hero{{display:none}}.tools{{position:static;margin-top:8px}}.day{{margin-top:14px}}.day h3:focus{{outline:none}}.day-switch{{display:flex;justify-content:space-between;gap:10px;padding:12px 0 26px}}.day-switch a{{text-decoration:none;padding:9px 14px;border:1px solid #dce3da;border-radius:9px;font-size:13px}}.calendar{{margin-top:8px}}.route-tip{{font-size:12px;color:var(--muted)}}
 @media print{{.site-nav,.day-switch{{display:none}}body[data-view="day"] .day{{break-before:auto}}}}
-</style></head><body data-view="calendar"><main><header class="hero"><div class="eyebrow">CET–6 · STUDY PLANNER</div><h1>每天一点，离目标更近。</h1><p class="hero-sub">六级词汇进阶</p><div class="hero-stats"><div><strong>40</strong><span>词 / 学习日</span></div><div><strong>1460</strong><span>词与搭配</span></div><div><strong>550</strong><span>目标分数</span></div></div></header><nav class="site-nav" aria-label="主导航"><a href="#calendar" data-view-link="calendar">学习日历</a><a href="#vocabulary" data-view-link="vocabulary">我的生词</a><a href="#guide" data-view-link="guide">学习方法</a></nav><noscript><p>请开启浏览器 JavaScript，点击日历日期后查看学习内容。</p></noscript>''']
-    chunks += ['<div class="tools" id="study-tools" hidden><button id="mask" type="button" aria-pressed="false">遮住释义和搭配 · 自测</button><button type="button" id="print">打印 / 存为 PDF</button><select id="jump" aria-label="跳转日期"><option value="">跳到某一天…</option>']
+</style></head><body data-view="calendar"><main><header class="hero"><div class="eyebrow">CET–6 · STUDY PLANNER</div><h1>每天一点，离目标更近。</h1><p class="hero-sub">六级词汇进阶 · 2026.10.27 起调整</p><div class="hero-stats"><div><strong>40</strong><span>词 / 学习日</span></div><div><strong>1460</strong><span>词与搭配</span></div><div><strong>550</strong><span>目标分数</span></div></div></header><nav class="site-nav" aria-label="主导航"><a href="#calendar" data-view-link="calendar">学习日历</a><a href="#vocabulary" data-view-link="vocabulary">我的生词</a><a href="#guide" data-view-link="guide">学习方法</a></nav><noscript><p>请开启浏览器 JavaScript，点击日历日期后查看学习内容。</p></noscript>''']
+    chunks += ['<div class="tools" id="study-tools" hidden><button id="mask" type="button" aria-pressed="false">遮住释义和搭配 · 自测</button><button type="button" id="print">导出 PDF</button><select id="jump" aria-label="跳转日期"><option value="">跳到某一天…</option>']
     chunks += [f'<option value="d{i}">{esc(label(i))}</option>' for i in range(1,49)]
     chunks += ['</select><button type="button" id="back-calendar">回到日历</button></div>', '<section class="calendar" id="calendar" aria-label="备考日历"><div class="cal-heading"><div><h2>学习日历</h2><p class="cal-sub">40词学习日 · 约30词复习 · 每周一次总复习</p></div><div class="month-tabs" role="tablist" aria-label="选择月份">']
     for month in (10,11,12):
@@ -1182,7 +1182,6 @@ body.test .phrase span{{visibility:hidden}}body.test .phrase:hover span,body.tes
     chunks += ['<tr><td>____</td><td>____________</td><td>____________________</td><td>□　□　□</td></tr>']*10
     chunks += ['''</tbody></table></div><p class="muted">学习资料编写日期：2026年10月26日。词汇训练服务于理解和表达，不以背词数量代替真题检验。</p></section></main><script>
 document.getElementById('mask').addEventListener('click',function(){const on=document.body.classList.toggle('test');this.setAttribute('aria-pressed',String(on));this.textContent=on?'显示释义和搭配':'遮住释义和搭配 · 自测';});
-document.getElementById('print').addEventListener('click',()=>window.print());
 document.getElementById('jump').addEventListener('change',function(){if(this.value)location.hash=this.value;});
 document.getElementById('back-calendar').addEventListener('click',()=>{location.hash='calendar';});
 const monthTabs = Array.from(document.querySelectorAll('[role="tab"][data-month]'));
@@ -1376,7 +1375,7 @@ window.addEventListener('hashchange',syncCalendarSelection);syncCalendarSelectio
   renderVocabulary();
   updateCalendar();
 })();
-</script></body></html>''']
+</script><script src="assets/export-pdf.js" defer></script></body></html>''']
     return '\n'.join(chunks)
 
 if __name__ == '__main__':
