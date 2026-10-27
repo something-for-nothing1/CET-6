@@ -1,0 +1,651 @@
+# 抽象学术与精准论证
+intrinsic|内在的；本质的|intrinsic motivation
+compelling|有说服力的；强烈的|compelling evidence
+constrain|限制；约束|constrain development
+explicit|明确的；直言的|explicit instructions
+implicit|隐含的；不言明的|implicit assumptions
+coherent|连贯的；一致的|a coherent argument
+plausibility|可信性；合理性|the plausibility of an explanation
+rigorous|严谨的；严格的|rigorous analysis
+tentative|暂定的；试探性的|a tentative conclusion
+elaborate|详尽的；详细阐述|elaborate on a point
+substantiate|证实；提供依据|substantiate a claim
+conceive|构想；认为|conceive of an alternative
+conceptual|概念的|a conceptual framework
+notion|概念；观念|a common notion
+paradigm|范式；典范|a shift in paradigm
+underlying|潜在的；根本的|underlying causes
+salient|显著的；突出的|salient features
+pertinent|相关的；切题的|pertinent evidence
+nuance|细微差别|a subtle nuance
+coincidence|巧合；同时发生|a mere coincidence
+# 教育机会与人才培养
+pedagogy|教学法|innovative pedagogy
+attainment|成就；达到|educational attainment
+enrichment|充实；丰富|curriculum enrichment
+mentoring|导师指导|peer mentoring
+apprenticeship|学徒期；学徒培训|an apprenticeship programme
+credential|资格证书；资历|academic credentials
+accreditation|认证；认可|institutional accreditation
+remedial|补救性的；矫正的|remedial teaching
+formative|形成性的；影响发展的|formative assessment
+summative|总结性的|summative assessment
+extracurricular|课外的|extracurricular activities
+interdisciplinary|跨学科的|interdisciplinary learning
+rote|机械重复；死记硬背|rote learning
+comprehend|理解；领会|comprehend complex ideas
+assimilate|吸收；同化|assimilate new knowledge
+articulate|清楚表达；善于表达的|articulate a viewpoint
+inquisitive|好奇的；爱探究的|an inquisitive mind
+dedicated|专注的；敬业的|dedicated teachers
+inclusive education|融合教育；包容性教育|promote inclusive education
+educational disparity|教育差距|reduce educational disparities
+# 社会结构与公平
+stratification|分层；阶层化|social stratification
+mobility|流动性|upward social mobility
+marginalize|使边缘化|marginalize vulnerable groups
+stigmatize|使蒙受污名|stigmatize mental illness
+exclusion|排斥；排除|social exclusion
+empowerment|赋权；增强自主能力|community empowerment
+disparity|差距；不平等|regional disparities
+impoverished|贫困的|impoverished communities
+affluent|富裕的|affluent households
+redistribution|再分配|income redistribution
+merit|优点；价值；功绩|judge on merit
+meritocracy|任人唯贤的制度|the ideal of meritocracy
+cohesion|凝聚力|social cohesion
+integration barrier|融合障碍|overcome integration barriers
+entrenched|根深蒂固的|entrenched inequality
+uphold|维护；坚持|uphold equal rights
+redress|纠正；补偿|redress an imbalance
+disenfranchise|剥夺选举权或权利|disenfranchised citizens
+grassroots|基层的|grassroots organizations
+communal|公共的；社区的|communal facilities
+# 科技创新与技术转型
+disruptive|颠覆性的；扰乱的|disruptive innovation
+automation|自动化|industrial automation
+digitization|数字化|the digitization of records
+deployment|部署；应用|technology deployment
+scalability|可扩展性|system scalability
+interoperability|互操作性|improve interoperability
+computational|计算的|computational methods
+simulation|模拟|computer simulation
+sensor|传感器|a temperature sensor
+semiconductor|半导体|semiconductor manufacturing
+robotics|机器人技术|advances in robotics
+autonomous|自主的；自动运行的|autonomous vehicles
+augmentation|增强；扩充|human augmentation
+obsolescence|过时；淘汰|technological obsolescence
+ubiquitous|无处不在的|ubiquitous digital devices
+cutting-edge|尖端的|cutting-edge technology
+commercialize|使商业化|commercialize an invention
+prototype testing|原型测试|conduct prototype testing
+technical feasibility|技术可行性|assess technical feasibility
+technological advancement|技术进步|rapid technological advancement
+# 科学研究与数据推断
+quantify|量化|quantify the impact
+validate|验证；确认有效|validate a model
+generalize|概括；推广|generalize the findings
+extrapolate|外推；推断|extrapolate from limited data
+confound|混淆；使困惑|confounding factors
+randomize|使随机化|randomize group assignment
+baseline|基线；参照标准|establish a baseline
+benchmark|基准|a performance benchmark
+outlier|离群值；异常值|identify outliers
+variance|方差；差异|explain the variance
+deviation|偏离；偏差|standard deviation
+distribution|分布；分配|a normal distribution
+probability|概率；可能性|estimate a probability
+likelihood|可能性|increase the likelihood
+parameter|参数；界限|model parameters
+indicator|指标；迹象|economic indicators
+metric|衡量指标|a useful metric
+causal|因果的|a causal relationship
+longitudinal|纵向的；长期追踪的|a longitudinal study
+cross-sectional|横断面的|a cross-sectional survey
+# 因果关系与写作论证
+precipitate|促使突然发生；仓促的|precipitate a crisis
+stem from|源于|problems stem from inequality
+give rise to|引起；导致|give rise to concern
+bring about|带来；引起|bring about social change
+account for|解释；占比|account for regional differences
+result in|导致|result in higher costs
+result from|由……造成|result from poor planning
+conducive|有助于……的|conducive to learning
+contingent|取决于……的|contingent on funding
+conditional|有条件的|conditional approval
+plausibly|看似合理地|plausibly explain the pattern
+presumably|据推测；大概|presumably due to changes
+arguably|可以认为；可论证地|arguably the main cause
+ostensibly|表面上；据称|ostensibly beneficial policies
+purported|据称的；传闻的|the purported benefits
+counterargument|反面论点|address a counterargument
+rebuttal|反驳|a convincing rebuttal
+analogy|类比|draw an analogy
+counterproductive|适得其反的|counterproductive measures
+trade-off|权衡；取舍|a trade-off between cost and quality
+# 环境治理与生态修复
+ecological|生态的|ecological balance
+anthropogenic|人为造成的|anthropogenic emissions
+decarbonization|脱碳|industrial decarbonization
+sequestration|封存；隔离|carbon sequestration
+reforestation|重新造林|large-scale reforestation
+afforestation|植树造林|afforestation projects
+reclamation|复垦；回收|land reclamation
+remediation|修复；补救|soil remediation
+effluent|废水；排出物|industrial effluent
+landfill|垃圾填埋场；填埋|landfill waste
+incineration|焚烧|waste incineration
+particulate|微粒；颗粒的|particulate matter
+debris|碎片；残骸|marine debris
+runoff|地表径流|agricultural runoff
+watershed|流域；转折点|watershed management
+wetland|湿地|wetland protection
+salinization|盐碱化|soil salinization
+desertification|荒漠化|combat desertification
+replenish|补充；重新装满|replenish water supplies
+ecological footprint|生态足迹|reduce the ecological footprint
+# 经济发展与产业升级
+monetary|货币的|monetary policy
+fiscal|财政的|fiscal stimulus
+macroeconomic|宏观经济的|macroeconomic stability
+microeconomic|微观经济的|microeconomic analysis
+entrepreneur|企业家|young entrepreneurs
+entrepreneurship|创业；企业家精神|encourage entrepreneurship
+enterprise|企业；事业心|small and medium-sized enterprises
+diversify|使多样化|diversify the economy
+diversification|多样化|industrial diversification
+restructure|重组；调整结构|restructure an industry
+deregulation|放松管制|financial deregulation
+liberalization|自由化；放宽限制|trade liberalization
+protectionism|贸易保护主义|rising protectionism
+tariff|关税|impose tariffs
+quota|配额|an import quota
+commodity|商品；大宗商品|commodity prices
+equilibrium|均衡；平衡|market equilibrium
+leverage|杠杆作用；利用|financial leverage
+liquidity|流动性；变现能力|market liquidity
+solvency|偿债能力|maintain solvency
+# 文化传承与历史保护
+antiquity|古代；古物|dating back to antiquity
+antique|古董；古老的|antique furniture
+chronicle|编年史；记载|chronicle historical events
+chronology|年代顺序|establish a chronology
+folklore|民间传说|local folklore
+mythology|神话|Chinese mythology
+oral tradition|口述传统|preserve oral traditions
+inscription|铭文；碑文|an ancient inscription
+manuscript|手稿|a rare manuscript
+archive|档案；归档|historical archives
+curator|博物馆馆长；策展人|a museum curator
+conservator|文物修复保护人员|a skilled conservator
+repertoire|全部曲目；技能储备|a traditional repertoire
+lineage|世系；传承谱系|an artistic lineage
+patronage|资助；庇护|artistic patronage
+vernacular|本地语言；本土的|vernacular architecture
+assimilative|同化性的|assimilative pressures
+reinterpret|重新诠释|reinterpret a classic
+cultural continuity|文化延续性|maintain cultural continuity
+collective memory|集体记忆|preserve collective memory
+# 职场适应与组织管理
+employability|就业能力|enhance employability
+upskill|提升技能|upskill the workforce
+reskill|学习新职业技能|reskill displaced workers
+transferable|可迁移的；可转让的|transferable skills
+redundancy|裁员；冗余|compulsory redundancy
+displacement|取代；迁移|job displacement
+outsourcing|外包|business outsourcing
+offshoring|离岸外包；业务外迁|production offshoring
+freelance|自由职业的|freelance work
+precarious|不稳定的；危险的|precarious employment
+contingent worker|临时雇员|protection for contingent workers
+absenteeism|旷工；缺勤|reduce absenteeism
+presenteeism|带病出勤；低效出勤|workplace presenteeism
+remuneration|报酬；薪酬|competitive remuneration
+appraisal|评价；考核|performance appraisal
+delegation|授权；代表团|effective delegation
+decentralize|使分权；分散|decentralize decision-making
+streamline|简化；使高效|streamline procedures
+synergy|协同作用|create synergy
+organizational culture|组织文化|improve organizational culture
+# 健康与心理机制
+predisposition|倾向；易感性|a genetic predisposition
+susceptibility|易感性|susceptibility to infection
+immunity|免疫力|acquired immunity
+pathogen|病原体|waterborne pathogens
+transmission|传播；传输|disease transmission
+prevalence|流行程度；普遍性|the prevalence of obesity
+incidence|发生率|disease incidence
+morbidity|患病情况；发病率|reduce morbidity
+prognosis|预后；预测|a favourable prognosis
+rehabilitative|康复的|rehabilitative care
+therapeutic|治疗的|therapeutic benefits
+physiological|生理的|physiological responses
+psychological|心理的|psychological support
+neurological|神经系统的|neurological disorders
+hormone|激素|stress hormones
+inflammation|炎症|chronic inflammation
+deficiency|缺乏；不足|vitamin deficiency
+malnutrition|营养不良|child malnutrition
+adherence|遵守；坚持|adherence to treatment
+stigma|污名；耻辱|the stigma of mental illness
+# 媒体识读与数字伦理
+disinformation|故意传播的虚假信息|counter disinformation
+fabricate|捏造；制造|fabricate evidence
+distort|扭曲；歪曲|distort the facts
+amplify|放大；增强|amplify a message
+polarization|两极分化|political polarization
+echo chamber|回音室；封闭信息环境|an online echo chamber
+confirmation bias|确认偏误|avoid confirmation bias
+algorithmic|算法的|algorithmic bias
+profiling|画像分析；特征归类|consumer profiling
+anonymity|匿名状态|online anonymity
+encryption|加密|data encryption
+breach|违反；泄露；突破|a data breach
+misuse|滥用；误用|the misuse of information
+exploitation|剥削；开发；利用|commercial exploitation
+intellectual property|知识产权|protect intellectual property
+attribution|归属；署名；归因|proper attribution
+disclosure|披露|full disclosure
+traceability|可追溯性|data traceability
+provenance|来源；出处|verify data provenance
+digital divide|数字鸿沟|bridge the digital divide
+# 全球化与国际协作
+multinational|跨国的|multinational corporations
+transnational|跨国界的|transnational challenges
+geopolitical|地缘政治的|geopolitical tensions
+sovereignty|主权|national sovereignty
+reciprocity|互惠；相互性|the principle of reciprocity
+conciliation|调解；和解|conciliation efforts
+mediation|调解；斡旋|international mediation
+arbitration|仲裁|commercial arbitration
+ratify|批准；正式认可|ratify a treaty
+treaty|条约|an international treaty
+convention|公约；惯例|an international convention
+protocol|议定书；规程|a safety protocol
+alliance|联盟|a strategic alliance
+coalition|联合体；联盟|form a coalition
+humanitarian|人道主义的|humanitarian assistance
+displaced|流离失所的；被取代的|displaced people
+asylum|庇护|seek asylum
+integration policy|融合政策|an effective integration policy
+cross-border|跨境的|cross-border trade
+people-to-people exchange|民间交流|promote people-to-people exchanges
+# 农业升级与粮食保障
+subsistence|维持生计|subsistence farming
+horticulture|园艺|modern horticulture
+aquaculture|水产养殖|sustainable aquaculture
+fishery|渔业；渔场|fishery management
+husbandry|农牧管理|animal husbandry
+breeding|培育；繁殖|selective breeding
+germination|发芽|seed germination
+pollination|授粉|insect pollination
+monoculture|单一作物种植|intensive monoculture
+rotation|轮作；轮换|crop rotation
+agrochemical|农用化学品|reduce agrochemical use
+aridity|干旱|increasing aridity
+salinity|盐度|soil salinity
+depletion|耗竭；减少|groundwater depletion
+water-saving irrigation|节水灌溉|adopt water-saving irrigation
+food security|粮食安全|ensure food security
+food safety|食品安全|improve food safety
+precision agriculture|精准农业|develop precision agriculture
+supply chain|供应链|a resilient supply chain
+value-added|增值的|value-added agricultural products
+# 城市规划与社区生活
+sprawl|无序扩展|urban sprawl
+gentrification|社区中产化|the effects of gentrification
+zoning|分区规划|urban zoning
+redevelopment|重新开发|urban redevelopment
+densification|密集化|urban densification
+decentralization|分散化；分权|administrative decentralization
+walkability|步行便利性|improve neighbourhood walkability
+accessibility|可达性；无障碍程度|transport accessibility
+livability|宜居性|urban livability
+affordability|可负担性|housing affordability
+segregation|隔离；分离|residential segregation
+commuter|通勤者|daily commuters
+conurbation|城市群；集合城市|a large conurbation
+suburban|郊区的|suburban development
+metropolis|大都市|a thriving metropolis
+municipality|市；自治市|a local municipality
+drainage|排水|urban drainage systems
+retrofitting|改造；加装|energy-efficient retrofitting
+resilient city|韧性城市|build resilient cities
+public realm|公共空间|improve the public realm
+# 认知、学习与行为决策
+heuristic|启发式；经验法则|a decision-making heuristic
+cognition|认知|human cognition
+metacognition|元认知|develop metacognition
+inhibition|抑制|cognitive inhibition
+impulsivity|冲动性|reduce impulsivity
+habituation|习惯化|habituation to noise
+conditioning|条件作用；训练|classical conditioning
+reinforcement|强化|positive reinforcement
+retrieval|检索；提取|retrieval practice
+consolidation|巩固；整合|memory consolidation
+encoding|编码|information encoding
+salience|显著性|emotional salience
+attentional|注意力的|attentional control
+deliberate|深思熟虑的；故意的|deliberate practice
+automatic|自动的；无意识的|an automatic response
+implicit memory|内隐记忆|implicit memory tasks
+working memory|工作记忆|working memory capacity
+cognitive load|认知负荷|reduce cognitive load
+spaced repetition|间隔重复|use spaced repetition
+retrieval cue|提取线索|an effective retrieval cue
+# 消费决策与市场行为
+disposable|可支配的；一次性的|disposable income
+discretionary|可自行决定的|discretionary spending
+frugal|节俭的|a frugal lifestyle
+thrifty|节省的|thrifty consumers
+extravagant|奢侈的；过度的|extravagant spending
+conspicuous|显眼的|conspicuous consumption
+materialism|物质主义|consumer materialism
+consumerism|消费主义|the rise of consumerism
+commodify|使商品化|commodify personal data
+monopolize|垄断|monopolize a market
+oligopoly|寡头垄断|a market oligopoly
+elasticity|弹性|price elasticity of demand
+substitution|替代|product substitution
+utility|效用；公用事业|consumer utility
+saturation|饱和|market saturation
+penetration|渗透；进入|market penetration
+segmentation|细分|market segmentation
+endorsement|认可；代言|celebrity endorsement
+rebate|返还款；折让|a tax rebate
+procurement|采购|public procurement
+# 公共治理与制度执行
+jurisdiction|司法管辖权；权限|within local jurisdiction
+mandate|授权；命令|a legal mandate
+statutory|法定的|statutory requirements
+legislative|立法的|legislative reform
+judicial|司法的|judicial independence
+administrative|行政的|administrative efficiency
+constitutional|宪法的|constitutional rights
+statute|成文法|a national statute
+ordinance|条例；法令|a municipal ordinance
+amendment|修正案；修改|a constitutional amendment
+enact|颁布；制定|enact legislation
+stipulate|规定；约定|stipulate conditions
+authorize|授权；批准|authorize an investigation
+exempt|豁免的；免除|exempt from tax
+exemption|豁免|a tax exemption
+litigation|诉讼|civil litigation
+prosecution|起诉；检控|criminal prosecution
+deterrent|威慑因素|a deterrent to crime
+sanction|制裁；批准|economic sanctions
+oversight|监督；疏忽|regulatory oversight
+# 人口变迁与家庭支持
+demography|人口学|the study of demography
+cohort|同龄群体；研究队列|a birth cohort
+ageism|年龄歧视|combat ageism
+geriatric|老年医学的|geriatric care
+geriatrics|老年医学|specialize in geriatrics
+centenarian|百岁老人|a growing number of centenarians
+caregiving|照护|family caregiving
+dependent|依赖的；受抚养者|dependent children
+breadwinner|家庭主要经济支柱|the family breadwinner
+parental|父母的|parental involvement
+maternal|母亲的；产妇的|maternal health
+paternal|父亲的|paternal support
+childcare|儿童照护|affordable childcare
+kinship|亲属关系|kinship networks
+cohabitation|同居|patterns of cohabitation
+household composition|家庭构成|changes in household composition
+life expectancy|预期寿命|rising life expectancy
+dependency burden|抚养负担|an increasing dependency burden
+age-friendly|适老的|age-friendly communities
+population ageing|人口老龄化|respond to population ageing
+# 能源转型与绿色产业
+photovoltaic|光伏的|photovoltaic panels
+geothermal|地热的|geothermal energy
+biomass|生物质|biomass energy
+biofuel|生物燃料|sustainable biofuels
+hydrogen|氢|green hydrogen
+electrification|电气化|transport electrification
+combustion|燃烧|an internal combustion engine
+insulation|隔热；绝缘|building insulation
+intermittent|间歇的|intermittent power generation
+intermittency|间歇性|renewable energy intermittency
+dispatchable|可调度的|dispatchable power
+baseload|基础负荷|baseload electricity demand
+transmission line|输电线路|upgrade transmission lines
+energy intensity|能源强度|reduce energy intensity
+energy security|能源安全|strengthen energy security
+energy efficiency|能源效率|improve energy efficiency
+carbon intensity|碳强度|lower carbon intensity
+carbon pricing|碳定价|introduce carbon pricing
+emissions trading|排放权交易|an emissions trading system
+circular economy|循环经济|develop a circular economy
+# 科学发现与自然系统
+empiricism|经验主义；实证方法|scientific empiricism
+falsifiable|可证伪的|a falsifiable hypothesis
+reproducibility|可复现性|improve reproducibility
+replication|重复验证；复制|independent replication
+inference|推断；推理|statistical inference
+inconsistency|不一致|resolve an inconsistency
+anomaly|异常现象|a statistical anomaly
+robustness|稳健性|test robustness
+sensitivity|敏感性；灵敏度|sensitivity analysis
+calibrate|校准|calibrate an instrument
+apparatus|仪器；装置|experimental apparatus
+specimen|样本；标本|a biological specimen
+microscopic|微观的；显微的|microscopic organisms
+macroscopic|宏观的；肉眼可见的|macroscopic properties
+atomic|原子的|atomic structure
+particle|粒子；微粒|airborne particles
+velocity|速度|the velocity of an object
+acceleration|加速度；加速|constant acceleration
+equation|方程；等式|solve an equation
+coefficient|系数|a correlation coefficient
+# 生物、生态与适应
+evolutionary|进化的|evolutionary biology
+hereditary|遗传的；世袭的|a hereditary condition
+genome|基因组|the human genome
+genotype|基因型|genotype variation
+phenotype|表型|observable phenotypes
+natural selection|自然选择|evolution by natural selection
+mutation rate|突变率|estimate the mutation rate
+reproductive|生殖的；繁殖的|reproductive success
+mammal|哺乳动物|marine mammals
+vertebrate|脊椎动物|vertebrate species
+invertebrate|无脊椎动物|aquatic invertebrates
+amphibian|两栖动物|amphibian habitats
+microbe|微生物|soil microbes
+microorganism|微生物|beneficial microorganisms
+symbiosis|共生|a symbiotic relationship
+parasitic|寄生的|a parasitic organism
+invasive|入侵的；侵入性的|invasive species
+endemic|地方特有的；地方流行的|endemic species
+endangered|濒危的|endangered wildlife
+dormant|休眠的；暂不活跃的|dormant seeds
+# 文化艺术与审美表达
+evoke|唤起|evoke memories
+depict|描绘|depict everyday life
+portray|描绘；塑造|portray a character
+embody|体现；包含|embody cultural values
+epitomize|是……的典型|epitomize an artistic tradition
+commemorate|纪念|commemorate a historical event
+celebrate|庆祝；赞扬|celebrate cultural diversity
+resonate|引起共鸣|resonate with audiences
+rendition|演绎；表演|a modern rendition
+adaptable|适应性强的|an adaptable tradition
+improvisation|即兴创作|musical improvisation
+composition|作品；构成|a musical composition
+ornament|装饰物；装饰|architectural ornaments
+ornate|装饰华丽的|ornate decoration
+intricate|复杂精细的|intricate patterns
+exquisite|精美的|exquisite craftsmanship
+ingenious|巧妙的；有创造力的|an ingenious design
+prestigious|有声望的|a prestigious institution
+acclaimed|广受赞誉的|a critically acclaimed work
+renaissance|复兴；文艺复兴|a cultural renaissance
+# 沟通、立场与谈判
+concession|让步；特许权|make a concession
+concede|承认；让步|concede a point
+conciliatory|和解性的|a conciliatory tone
+contentious|有争议的；爱争论的|a contentious issue
+adversarial|对抗性的|an adversarial relationship
+consensual|经各方同意的|a consensual decision
+dissent|异议；持异议|express dissent
+assent|赞同；同意|give assent
+advocacy|倡导；支持|public advocacy
+persuasive|有说服力的|persuasive arguments
+rhetoric|修辞；华丽言辞|political rhetoric
+eloquent|雄辩的；有表现力的|an eloquent speaker
+succinct|简明的|a succinct explanation
+concise|简洁的|concise writing
+candid|坦率的|a candid discussion
+frank|坦诚的|a frank exchange
+tactful|得体的；圆通的|a tactful response
+diplomacy|外交；交际手腕|effective diplomacy
+receptive|乐于接受的|receptive to feedback
+assertiveness|自信坚定|develop assertiveness
+# 时间、程度与趋势进阶
+incremental|渐进的；逐步的|incremental improvements
+exponential|指数式的|exponential growth
+proportional|成比例的|proportional to income
+disproportionate|不成比例的|a disproportionate impact
+negligible|微不足道的|a negligible difference
+pronounced|显著的；明显的|a pronounced effect
+marked|显著的；明确的|a marked improvement
+pervasive|普遍存在的|pervasive inequality
+prevalent|普遍的；盛行的|a prevalent belief
+sporadic|零星的；偶发的|sporadic outbreaks
+periodic|周期性的|periodic reviews
+cyclical|周期性的|cyclical fluctuations
+transient|短暂的|a transient effect
+enduring|持久的|an enduring influence
+prolonged|持续很久的|prolonged exposure
+simultaneous|同时的|simultaneous changes
+subsequent|随后的|subsequent developments
+preceding|在前的|the preceding decade
+prospective|预期的；未来可能的|prospective benefits
+retrospective|回顾性的|a retrospective study
+# 熟词僻义与动词搭配
+pose|造成；提出；摆姿势|pose a threat
+render|使成为；提供|render a method ineffective
+harbour|怀有；港口|harbour doubts
+entertain|考虑；款待|entertain a possibility
+embrace|欣然接受；拥抱|embrace change
+exploit|利用；剥削|exploit an opportunity
+command|博得；指挥；掌握|command respect
+yield to|屈服于；让步于|yield to pressure
+subject to|取决于；使遭受|subject to approval
+reflect on|反思|reflect on past experience
+bear in mind|牢记|bear in mind the limitations
+take stock of|盘点；评估|take stock of progress
+draw on|利用；借鉴|draw on previous research
+tap into|利用；开发|tap into local expertise
+cater to|迎合；满足|cater to different needs
+hinge on|取决于|success hinges on cooperation
+rest on|建立在……上；取决于|rest on an assumption
+fall short of|未达到|fall short of expectations
+live up to|达到；不辜负|live up to expectations
+make up for|弥补|make up for lost time
+# 写作核心搭配与句法衔接
+in light of|鉴于；根据|in light of the evidence
+in terms of|就……而言|in terms of efficiency
+with regard to|关于|with regard to education
+by virtue of|由于；凭借|by virtue of experience
+in conjunction with|与……结合|in conjunction with other measures
+in contrast to|与……形成对比|in contrast to previous studies
+as opposed to|相对于；而非|quality as opposed to quantity
+irrespective of|不论；不顾|irrespective of background
+regardless of|不论；不顾|regardless of age
+insofar as|在……的范围内；就……而言|insofar as it is feasible
+provided that|只要；条件是|provided that support is available
+on condition that|条件是|on condition that standards are met
+to the extent that|在……程度上|to the extent that evidence permits
+at the expense of|以……为代价|at the expense of quality
+for the sake of|为了|for the sake of convenience
+on the grounds that|理由是|on the grounds that costs are excessive
+in the long run|从长远来看|beneficial in the long run
+in the meantime|与此同时；在此期间|provide support in the meantime
+in essence|本质上|in essence a matter of fairness
+on balance|总的来说；权衡之后|on balance a positive change
+# 风险判断与危机韧性
+foresee|预见|foresee potential problems
+anticipate|预期；预料|anticipate future demand
+avert|避免；防止|avert a disaster
+curb|遏制；控制|curb excessive spending
+contain|控制；包含|contain an outbreak
+withstand|经受住|withstand external shocks
+endure|忍受；持久|endure hardship
+contend with|应对；处理|contend with uncertainty
+insulate|隔离保护；使绝缘|insulate households from shocks
+buffer|缓冲；缓冲物|buffer the impact
+vigilant|警惕的|remain vigilant
+vigilance|警觉|maintain vigilance
+contingency planning|应急规划|strengthen contingency planning
+preparedness|准备程度|disaster preparedness
+hazardous|危险的|hazardous materials
+peril|严重危险|environmental peril
+vulnerability|脆弱性|reduce vulnerability
+resilient|有韧性的；能恢复的|a resilient community
+redundancy planning|冗余规划|redundancy planning for critical systems
+early warning|预警|an early warning system
+# 判断立场与抽象属性
+indispensable|不可或缺的|an indispensable resource
+instrumental|起重要作用的|instrumental in promoting change
+detrimental|有害的|detrimental to health
+advantageous|有利的|advantageous to learners
+exemplary|典范的；值得效仿的|exemplary leadership
+inadequate|不足的|inadequate funding
+insufficient|不充分的|insufficient evidence
+unprecedented|前所未有的|unprecedented challenges
+unwarranted|无正当理由的|unwarranted assumptions
+unintended|非预期的|unintended consequences
+unforeseen|未预见的|unforeseen difficulties
+incompatible|不相容的|incompatible with the evidence
+analogous|类似的|analogous to an earlier case
+comparable|可比较的；相当的|comparable outcomes
+equivalent|等同的|equivalent qualifications
+complementary|互补的|complementary approaches
+supplementary|补充的|supplementary materials
+redundant information|冗余信息|remove redundant information
+superficial|表面的；肤浅的|a superficial understanding
+profound|深刻的；深远的|a profound impact
+# 中国发展主题翻译搭配
+high-quality development|高质量发展|promote high-quality development
+rural revitalization|乡村振兴|advance rural revitalization
+common prosperity|共同富裕|promote common prosperity
+ecological civilization|生态文明|build an ecological civilization
+intangible heritage|非物质文化遗产|safeguard intangible heritage
+traditional craftsmanship|传统工艺|preserve traditional craftsmanship
+regional coordination|区域协调|strengthen regional coordination
+balanced development|均衡发展|achieve balanced development
+industrial upgrading|产业升级|accelerate industrial upgrading
+innovation-driven development|创新驱动发展|pursue innovation-driven development
+public cultural services|公共文化服务|improve public cultural services
+basic public services|基本公共服务|ensure basic public services
+social security|社会保障|strengthen social security
+elderly care|养老服务|expand elderly care services
+digital economy|数字经济|develop the digital economy
+green transition|绿色转型|accelerate the green transition
+heritage conservation|遗产保护|support heritage conservation
+mutual learning|互学互鉴|promote mutual learning
+cultural confidence|文化自信|strengthen cultural confidence
+shared future|共同未来|work towards a shared future
+# 学术阅读中的抽象概念
+premise testing|前提检验|careful premise testing
+concept|概念|a central concept
+abstraction|抽象；抽象概念|a high level of abstraction
+complexity|复杂性|the complexity of a problem
+ambiguity|歧义；模糊性|resolve ambiguity
+consistency|一致性|internal consistency
+compatibility|兼容性；相容性|technical compatibility
+feasibility|可行性|a feasibility study
+validity|有效性；合理性|the validity of a measure
+reliability|可靠性|measurement reliability
+applicability|适用性|practical applicability
+generality|普遍性；概括性|the generality of a conclusion
+specificity|特异性；具体性|the specificity of a claim
+contingency theory|权变理论|apply contingency theory
+heterogeneity|异质性；差异性|population heterogeneity
+homogeneity|同质性；一致性|group homogeneity
+interdependence theory|相互依存理论|an interdependence theory framework
+interaction effect|交互作用|an interaction effect
+feedback loop|反馈循环|a positive feedback loop
+systemic|系统性的；全局性的|systemic change
