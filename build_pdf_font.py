@@ -9,6 +9,7 @@ from fontTools.ttLib import TTFont
 from fontTools.fontBuilder import FontBuilder
 from fontTools.pens.ttGlyphPen import TTGlyphPen
 from fontTools.pens.cu2quPen import Cu2QuPen
+from fontTools.varLib.instancer import instantiateVariableFont
 
 font=TTFont(ROOT/'tmp/pdfs/NotoSansSC-Regular.otf')
 text=(ROOT/'index.html').read_text(encoding='utf-8')+(ROOT/'assets/export-pdf.js').read_text(encoding='utf-8')
@@ -45,5 +46,16 @@ builder.setupPost()
 target=ROOT/'tmp/pdfs/CET6-PDF-Sans.ttf'
 builder.save(target)
 encoded=base64.b64encode(target.read_bytes()).decode('ascii')
-(ROOT/'assets/pdf/font-data.js').write_text('/* Noto Sans SC subset; SIL Open Font License, see OFL.txt. */\nwindow.CET6PdfFontBase64="'+encoded+'";\n',encoding='utf-8')
+ipa_font=TTFont(ROOT/'tmp/pdfs/NotoSans-Latin.ttf')
+instantiateVariableFont(ipa_font,{'wght':400,'wdth':100},inplace=True)
+ipa_text=''.join(__import__('json').loads((ROOT/'phonetics.json').read_text(encoding='utf-8')).values())
+ipa_chars={ord(ch) for ch in ipa_text}
+ipa_options=subset.Options();ipa_options.hinting=False;ipa_options.layout_features=[]
+ipa_subsetter=subset.Subsetter(options=ipa_options)
+ipa_subsetter.populate(unicodes=ipa_chars)
+ipa_subsetter.subset(ipa_font)
+assert all(code in font.getBestCmap() or code in ipa_font.getBestCmap() for code in ipa_chars)
+ipa_target=ROOT/'tmp/pdfs/CET6-IPA-Sans.ttf';ipa_font.save(ipa_target)
+ipa_encoded=base64.b64encode(ipa_target.read_bytes()).decode('ascii')
+(ROOT/'assets/pdf/font-data.js').write_text('/* Noto font subsets; SIL Open Font License, see OFL.txt and OFL-LATIN.txt. */\nwindow.CET6PdfFontBase64="'+encoded+'";\nwindow.CET6IpaFontBase64="'+ipa_encoded+'";\n',encoding='utf-8')
 print(f'PDF font: {target.stat().st_size} bytes; {len(font.getBestCmap())} characters')

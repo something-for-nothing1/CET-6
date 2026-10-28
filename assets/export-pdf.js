@@ -25,6 +25,7 @@
     return Array.from(table.querySelectorAll('tbody tr'), row => ({
       word:row.querySelector('.word')?.textContent.trim().replace(/^★\s*/, '') || '',
       meaning:row.querySelector('.meaning')?.textContent.trim() || '',
+      phonetic:row.querySelector('.phonetic')?.textContent.trim() || '',
       phrase:row.querySelector('.phrase')?.textContent.trim() || '',
       marked:row.classList.contains('marked'),
       priority:row.querySelector('.word')?.textContent.includes('★') || false,
@@ -66,24 +67,41 @@
     const pdf=await PDFDocument.create();
     pdf.registerFontkit(fontkit);
     const bytes=Uint8Array.from(atob(fontBase64),char=>char.charCodeAt(0));
-    // The font asset is already subset at build time; embed its complete OpenType
-    // data so CFF outlines stay compatible with Acrobat and other PDF readers.
+    // Font assets are already subset at build time; embed complete TrueType files.
     const font=await pdf.embedFont(bytes,{subset:false});
+    const ipaBytes=Uint8Array.from(atob(window.CET6IpaFontBase64),char=>char.charCodeAt(0));
+    const ipaFont=await pdf.embedFont(ipaBytes,{subset:false});
+    const primaryChars=new Set(font.getCharacterSet());
+    const fallbackChars=new Set(ipaFont.getCharacterSet());
+    function runs(value) {
+      const result=[];
+      for(const char of value) {
+        const code=char.codePointAt(0);
+        const selected=primaryChars.has(code)?font:(fallbackChars.has(code)?ipaFont:null);
+        if(!selected)throw new Error('PDF 字体缺少字符：'+char);
+        if(result.length && result[result.length-1].font===selected)result[result.length-1].value+=char;
+        else result.push({font:selected,value:char});
+      }
+      return result;
+    }
+    const measure=(value,fontSize)=>runs(value).reduce((sum,run)=>sum+run.font.widthOfTextAtSize(run.value,fontSize),0);
     pdf.setTitle(snapshot.title); pdf.setAuthor('CET-6 词汇复习');
     const ink=rgb(.14,.21,.18),muted=rgb(.43,.49,.44),green=rgb(.20,.43,.33);
     const lineColor=rgb(.86,.89,.85),yellow=rgb(1,.95,.72);
-    const W=595.28,H=841.89,left=40,right=W-40,bottom=48;
+    const W=841.89,H=595.28,left=36,right=W-36,bottom=42;
     const size=9.5,leading=14,padding=7;
-    const widths=[32,137,159,right-left-32-137-159];
+    const widths=[32,155,175,185,right-left-32-155-175-185];
     let page,y;
     const clean=value=>String(value).replace(/[\u2010-\u2015]/g,'-').replace(/\u00a0/g,' ');
-    const text=(value,x,baseline,fontSize=size,color=ink)=>page.drawText(clean(value),{x,y:baseline,size:fontSize,font,color});
+    const text=(value,x,baseline,fontSize=size,color=ink)=>{
+      for(const run of runs(clean(value))){page.drawText(run.value,{x,y:baseline,size:fontSize,font:run.font,color});x+=run.font.widthOfTextAtSize(run.value,fontSize);}
+    };
     function wrap(value,width,fontSize=size) {
       const result=[];
       for(const para of clean(value).split('\n')) {
         let line='';
         for(const ch of para) {
-          if(line && font.widthOfTextAtSize(line+ch,fontSize)>width){result.push(line);line=ch;} else line+=ch;
+          if(line && measure(line+ch,fontSize)>width){result.push(line);line=ch;} else line+=ch;
         }
         result.push(line);
       }
@@ -99,7 +117,7 @@
     }
     function header(){
       need(30);page.drawRectangle({x:left,y:y-25,width:right-left,height:25,color:rgb(.94,.96,.93)});
-      let x=left;['序号','英文 / ★优先运用','核心意思','常用搭配'].forEach((value,index)=>{text(value,x+padding,y-16,9,green);x+=widths[index];});y-=25;
+      let x=left;['序号','英文 / ★优先运用','核心意思','音标（美式）','常用搭配'].forEach((value,index)=>{text(value,x+padding,y-16,9,green);x+=widths[index];});y-=25;
     }
     newPage();paragraph(snapshot.title,17,ink);y-=3;paragraph(snapshot.subtitle,10,muted);y-=8;
     for(const group of snapshot.groups) {
@@ -107,7 +125,7 @@
       if(!group.rows.length){paragraph('当前生词本暂无词汇。');continue;}
       header();
       group.rows.forEach((row,index)=>{
-        const values=[String(index+1).padStart(2,'0'),(row.priority?'★ ':'')+row.word,row.meaning,row.phrase];
+        const values=[String(index+1).padStart(2,'0'),(row.priority?'★ ':'')+row.word,row.meaning,row.phonetic || '',row.phrase];
         const lines=values.map((value,col)=>wrap(value,widths[col]-padding*2));
         const height=Math.max(1,...lines.map(list=>list.length))*leading+padding*2;
         if(y-height<bottom){newPage();paragraph(group.title+'（续）',11,green);header();}

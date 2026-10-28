@@ -982,12 +982,14 @@ ORIGINAL_DAYS = DAYS
 DAYS = make_plan(ORIGINAL_DAYS, ROOT)
 TOTAL_WORDS = sum(len(d['rows']) for d in DAYS)
 LEARN_DAYS = sum(bool(d['rows']) for d in DAYS)
+PHONETICS = json.loads((ROOT/'phonetics.json').read_text(encoding='utf-8'))
 TITLE = '六级高频词汇｜48天逐日复习资料'
 INTRO = '''适用：四级571分、六级目标550分；侧重词汇补基础、写作翻译输出，同时支持阅读和听力。
 周期：2026年10月26日—12月12日。10月26日保留原20词；10月27日至12月6日安排36个40词学习日、5个周复习日，共1460个不同词条（含固定搭配）。12月7—11日集中复习，12月12日轻量回顾。
 选词说明：这是围绕六级常见主题、学术阅读、听力场景和写译表达编写的实用核心词表，不是依据某一真题语料库统计的频次榜，也不替代完整考纲词表。例句与小练习均为自编，不是真题引文。
 学习边界：优先掌握表内词义和搭配，不要求一次记住所有义项。词组内少量辅助词不另计新词。已经熟悉的词快速测过，将省下的时间用于真题生词。'''
 METHOD = '''词汇学习约40分钟：10分钟主动回忆约30个旧词，25分钟识记当天40词及搭配，5分钟检查理解。当天学习页已列出具体复习词，首次衔接日10月27日只有20个已学旧词，不虚构额外旧词。
+音标统一采用美式宽式IPA；固定搭配按各词的词典读音组合，不表示实际连读和弱读。多个读音并列时注意词性与语境；minute、resume等已另作说明。
 ★表示当天6个优先运用词（10月26日保留5个）：每词独立造一个句子，尽量用表内搭配，并检查语法和语义。将这6个词的造句、改写或翻译融入每天30分钟的写译训练，不要求40词全部默写。另留30分钟听力、20分钟阅读或复盘。
 普通日优先从约1、3、7天前的学习日各抽10词；间隔落在复习日时，回溯至最近的新词日。已有标黄词可优先替换同数量的熟词。每周一（11月2、9、16、23、30日）只总复习，不安排40个新词；12月7日起进入考前回顾。
 40词是目标而非硬指标：前25—30词先掌握，后10—15词可按记忆情况选学。如果连续几天旧词回忆不足一半，先降至25—30词并处理错词。识义按当天完整词表计分，未学部分不算会；例如会25词就填25/40。
@@ -1027,6 +1029,7 @@ def validate():
     assert len(DAYS) == 42
     words = [row[0] for d in DAYS for row in d['rows']]
     assert len(words) == 1460 and len(set(words)) == 1460, 'duplicate headwords'
+    assert all(word in PHONETICS and '/' in PHONETICS[word] for word in words)
     assert [i for i,d in enumerate(DAYS,1) if not d['rows']] == [8,15,22,29,36]
     assert all(len(d['rows'])==(20 if i==1 else 40) for i,d in enumerate(DAYS,1) if d['rows'])
     assert all(len(d['review_rows'])==(0 if i==1 else 20 if i==2 else 30) for i,d in enumerate(DAYS,1))
@@ -1051,14 +1054,14 @@ def markdown():
         out += [f'### {label(i)}｜{d["theme"]}', f'旧词来源：{due_text(i)}。']
         if d['rows']:
             out += [f'本日{len(d["rows"])}词；识义 __/{len(d["rows"])}。★词各造一句。',
-                    '| 序号 | 英文（★优先运用） | 核心意思 | 常用搭配 |', '|---|---|---|---|']
+                    '| 序号 | 英文（★优先运用） | 核心意思 | 音标 | 常用搭配 |', '|---|---|---|---|---|']
         else:
             out += ['今天不加新词。复盘本周6个学习日，重点检查下列30个旧词。']
         for k,(w,z,p) in enumerate(d['rows'],1):
-            out.append(f'| {k:02d} | {"★ " if k<=d["active_count"] else ""}{w} | {z} | {p} |')
+            out.append(f'| {k:02d} | {"★ " if k<=d["active_count"] else ""}{w} | {z} | {PHONETICS[w]} | {p} |')
         if d['review_rows']:
-            out += [f'**本日旧词复习：{len(d["review_rows"])}词**', '| 英文 | 核心意思 | 常用搭配 |','|---|---|---|']
-            out += [f'| {w} | {z} | {p} |' for w,z,p in d['review_rows']]
+            out += [f'**本日旧词复习：{len(d["review_rows"])}词**', '| 英文 | 核心意思 | 音标 | 常用搭配 |','|---|---|---|---|']
+            out += [f'| {w} | {z} | {PHONETICS[w]} | {p} |' for w,z,p in d['review_rows']]
         if d['rows']:
             out += ['**主动运用：**']+[f'- 用 **{w}** 造一句；可用搭配：{p}。' for w,z,p in d['rows'][:d['active_count']]]
             out += [f'**主题中译英：** {d["zh"]}', f'完成后核对文末「Day {i:02d}参考表达」。不同的正确译法也可以。']
@@ -1088,9 +1091,9 @@ def review_html(lesson):
     rows=lesson['review_rows']
     if not rows:return '<p class="meta">首日没有指定旧词任务。</p>'
     sources='、'.join(f'<a href="#d{i}">Day {i:02d}</a>' for i in lesson['source_days'])
-    out=[f'<details class="daily-review"><summary>复习旧词 · {len(rows)}词</summary><p class="meta">来源：{sources}。先遮释义回忆，再核查；标黄旧词可优先替换已熟练词。</p><div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>']
+    out=[f'<details class="daily-review"><summary>复习旧词 · {len(rows)}词</summary><p class="meta">来源：{sources}。先遮释义回忆，再核查；标黄旧词可优先替换已熟练词。</p><div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>音标</th><th>常用搭配</th></tr></thead><tbody>']
     for k,(w,z,p) in enumerate(rows,1):
-        out.append(f'<tr data-review-word="{esc(w)}"><td><button type="button" class="word-toggle" data-word="{esc(w)}" aria-pressed="false" aria-label="标记生词 {esc(w)}">{k:02d}</button></td><td class="word">{esc(w)}</td><td class="meaning" tabindex="0"><span>{esc(z)}</span></td><td class="phrase" tabindex="0"><span>{esc(p)}</span></td></tr>')
+        out.append(f'<tr data-review-word="{esc(w)}"><td><button type="button" class="word-toggle" data-word="{esc(w)}" aria-pressed="false" aria-label="标记生词 {esc(w)}">{k:02d}</button></td><td class="word">{esc(w)}</td><td class="meaning" tabindex="0"><span>{esc(z)}</span></td><td class="phonetic"><span>{esc(PHONETICS[w])}</span></td><td class="phrase" tabindex="0"><span>{esc(p)}</span></td></tr>')
     out.append('</tbody></table></div></details>')
     return '\n'.join(out)
 
@@ -1116,6 +1119,7 @@ body.test .phrase span{{visibility:hidden}}body.test .phrase:hover span,body.tes
 @media print{{main{{padding:0}}.hero-stats,.calendar,.about,.guide{{display:none}}.day,.vocab-panel{{border:0;background:white}}body{{background:white}}}}
  .site-nav{{display:flex;align-items:center;gap:8px;padding:12px 0;position:sticky;top:0;background:#f3f4eff5;backdrop-filter:blur(12px);z-index:3}}.site-nav a{{padding:8px 15px;border-radius:9px;text-decoration:none;color:#78847c;font-size:13px}}.site-nav a.active{{background:#e2ecdf;color:#315f45;font-weight:600}}body:not([data-view="calendar"]) .hero{{display:none}}.tools{{position:static;margin-top:8px}}.day{{margin-top:14px}}.day h3:focus{{outline:none}}.day-switch{{display:flex;justify-content:space-between;gap:10px;padding:12px 0 26px}}.day-switch a{{text-decoration:none;padding:9px 14px;border:1px solid #dce3da;border-radius:9px;font-size:13px}}.calendar{{margin-top:8px}}.route-tip{{font-size:12px;color:var(--muted)}}
 @media print{{.site-nav,.day-switch{{display:none}}body[data-view="day"] .day{{break-before:auto}}}}
+.phonetic{{font-family:Arial,"Segoe UI",sans-serif;font-size:14px;line-height:1.65;color:#526d60;min-width:170px}}.daily-review{{margin:14px 0}}@media(max-width:650px){{.tablewrap table{{min-width:900px}}}}
 </style></head><body data-view="calendar"><main><header class="hero"><div class="eyebrow">CET–6 · STUDY PLANNER</div><h1>每天一点，离目标更近。</h1><p class="hero-sub">六级词汇进阶 · 2026.10.27 起调整</p><div class="hero-stats"><div><strong>40</strong><span>词 / 学习日</span></div><div><strong>1460</strong><span>词与搭配</span></div><div><strong>550</strong><span>目标分数</span></div></div></header><nav class="site-nav" aria-label="主导航"><a href="#calendar" data-view-link="calendar">学习日历</a><a href="#vocabulary" data-view-link="vocabulary">我的生词</a><a href="#guide" data-view-link="guide">学习方法</a></nav><noscript><p>请开启浏览器 JavaScript，点击日历日期后查看学习内容。</p></noscript>''']
     chunks += ['<div class="tools" id="study-tools" hidden><button id="mask" type="button" aria-pressed="false">遮住释义和搭配 · 自测</button><button type="button" id="print">导出 PDF</button><select id="jump" aria-label="跳转日期"><option value="">跳到某一天…</option>']
     chunks += [f'<option value="d{i}">{esc(label(i))}</option>' for i in range(1,49)]
@@ -1147,7 +1151,7 @@ body.test .phrase span{{visibility:hidden}}body.test .phrase:hover span,body.tes
     chunks += [f'<p>{esc(p)}</p>' for p in METHOD.splitlines()]
     chunks += ['<p><a href="#resources">查看易混词、参考表达与补充资料</a></p></details>',
                '<p id="save-warning" class="save-warning" role="status" hidden>当前浏览器无法保存记录；本次仍可填写和标记，但刷新后可能丢失。</p>',
-               '<section id="vocabulary" class="vocab-panel" hidden><h2>生词 <span id="vocab-count" class="vocab-count" aria-live="polite">（0词）</span></h2><p class="meta">汇总所有标黄的单词，按英文字母顺序排列。在这里点击序号也可取消标记，原表会同步更新。</p><p id="plan-migration" class="meta" hidden>已保留旧版生词标记与10月26日分数。其余日期已换词，旧分数保留在浏览器原记录中，不换算为新版分数。</p><p id="vocab-empty">还没有生词。先从日历选择日期，再点击每日词表中的序号。</p><div id="vocab-table" class="tablewrap" hidden><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th><th>学习日</th></tr></thead><tbody id="vocab-body"></tbody></table></div></section>',
+               '<section id="vocabulary" class="vocab-panel" hidden><h2>生词 <span id="vocab-count" class="vocab-count" aria-live="polite">（0词）</span></h2><p class="meta">汇总所有标黄的单词，按英文字母顺序排列。在这里点击序号也可取消标记，原表会同步更新。</p><p id="plan-migration" class="meta" hidden>已保留旧版生词标记与10月26日分数。其余日期已换词，旧分数保留在浏览器原记录中，不换算为新版分数。</p><p id="vocab-empty">还没有生词。先从日历选择日期，再点击每日词表中的序号。</p><div id="vocab-table" class="tablewrap" hidden><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>音标</th><th>常用搭配</th><th>学习日</th></tr></thead><tbody id="vocab-body"></tbody></table></div></section>',
                '<details class="about" id="about" hidden><summary>关于这份复习资料</summary>'+''.join(f'<p>{esc(p)}</p>' for p in INTRO.splitlines())+'</details>']
     for i,d in enumerate(DAYS,1):
         if not d['rows']:
@@ -1160,10 +1164,10 @@ body.test .phrase span{{visibility:hidden}}body.test .phrase:hover span,body.tes
                    f'<p class="meta">旧词复习：{review_links}。</p><p class="route-tip">点击序号标黄生词，再点取消；分数与标记自动保存。</p>',
                    f'<p class="meta">{maximum}词 · '+('优先完成前25—30词；' if maximum==40 else '原安排保留；')+'★词各造一句。</p>'+review_html(d),
                    f'<p class="meta"><label for="score-{i}">识义 </label><input class="score" id="score-{i}" data-day="{i}" type="number" min="0" max="{maximum}" step="1" inputmode="numeric" placeholder="—" aria-label="Day {i:02d} 识义分数，0到{maximum}分"> /{maximum}</p>',
-                   '<div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>常用搭配</th></tr></thead><tbody>']
+                   '<div class="tablewrap"><table><thead><tr><th>序号</th><th>英文</th><th>核心意思</th><th>音标</th><th>常用搭配</th></tr></thead><tbody>']
         for k,(w,z,p) in enumerate(d['rows'],1):
             star='<span class="star">★ </span>' if k<=d['active_count'] else ''
-            chunks += [f'<tr data-word-row="{esc(w)}"><td><button type="button" class="word-toggle" data-word="{esc(w)}" aria-pressed="false" aria-label="标记生词 {esc(w)}">{k:02d}</button></td><td class="word">{star}{esc(w)}</td><td class="meaning" tabindex="0"><span>{esc(z)}</span></td><td class="phrase" tabindex="0"><span>{esc(p)}</span></td></tr>']
+            chunks += [f'<tr data-word-row="{esc(w)}"><td><button type="button" class="word-toggle" data-word="{esc(w)}" aria-pressed="false" aria-label="标记生词 {esc(w)}">{k:02d}</button></td><td class="word">{star}{esc(w)}</td><td class="meaning" tabindex="0"><span>{esc(z)}</span></td><td class="phonetic"><span>{esc(PHONETICS[w])}</span></td><td class="phrase" tabindex="0"><span>{esc(p)}</span></td></tr>']
         tasks=''.join(f'<li>用 <strong>{esc(w)}</strong> 造一句，建议搭配：{esc(p)}。</li>' for w,z,p in d['rows'][:d['active_count']])
         chunks += [f'</tbody></table></div><details class="quiz"><summary>主动运用 · {d["active_count"]}词各造一句</summary><ol>{tasks}</ol><p class="meta">这些是开放造句任务，没有唯一答案；先独立写，再检查搭配、主谓一致和信息是否合理。</p></details><div class="quiz"><strong>主题中译英：</strong>{esc(d["zh"])}<details><summary>完成后查看参考表达</summary><p>{esc(d["en"])}</p><p class="meta">自编例句；其他准确、自然的译法也可以。</p></details></div></section>']
     for i,a,b,t in REVIEW:
@@ -1242,7 +1246,7 @@ function syncCalendarSelection() {
 }
 window.addEventListener('hashchange',syncCalendarSelection);syncCalendarSelection();
 ''']
-    words = [{'word':w, 'meaning':z, 'phrase':p, 'day':i, 'priority':k<=d['active_count']}
+    words = [{'word':w, 'meaning':z, 'phonetic':PHONETICS[w], 'phrase':p, 'day':i, 'priority':k<=d['active_count']}
              for i,d in enumerate(DAYS,1) for k,(w,z,p) in enumerate(d['rows'],1)]
     chunks += ['const scoreLimits = '+json.dumps({i:len(d['rows']) for i,d in enumerate(DAYS,1) if d['rows']})+';']
     chunks += ['const vocabularyData = '+json.dumps(words,ensure_ascii=False).replace('<','\\u003c')+';', '''
@@ -1333,7 +1337,7 @@ window.addEventListener('hashchange',syncCalendarSelection);syncCalendarSelectio
       button.setAttribute('aria-label',`取消生词标记 ${item.word}`);
       numberCell.append(button); row.append(numberCell);
       cell(row, (item.priority ? '★ ' : '') + item.word, 'word');
-      cell(row, item.meaning, 'meaning'); cell(row, item.phrase, 'phrase');
+      cell(row, item.meaning, 'meaning'); cell(row, item.phonetic, 'phonetic'); cell(row, item.phrase, 'phrase');
       const link = document.createElement('a'); link.href = `#d${item.day}`;
       link.textContent = `Day ${String(item.day).padStart(2,'0')}`;
       const dayCell = document.createElement('td'); dayCell.append(link); row.append(dayCell);
