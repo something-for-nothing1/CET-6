@@ -1379,7 +1379,7 @@ window.addEventListener('hashchange',syncCalendarSelection);syncCalendarSelectio
   renderVocabulary();
   updateCalendar();
 })();
-</script><script src="assets/export-pdf.js" defer></script></body></html>''']
+</script><script src="assets/export-pdf.js?v=20261028-ipa" defer></script></body></html>''']
     return '\n'.join(chunks)
 
 if __name__ == '__main__':

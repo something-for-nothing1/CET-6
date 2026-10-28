@@ -3,6 +3,7 @@
   const button = document.getElementById('print');
   const scriptCache = new Map();
   const assetBase = new URL('pdf/', document.currentScript.src);
+  const assetVersion = '20261028-ipa';
   const status = document.createElement('p');
   status.id = 'pdf-status'; status.className = 'meta'; status.setAttribute('role','status');
   status.hidden = true;
@@ -13,7 +14,8 @@
     if (window[globalName]) return Promise.resolve(window[globalName]);
     if (!scriptCache.has(file)) scriptCache.set(file, new Promise((resolve,reject) => {
       const script = document.createElement('script');
-      script.src = new URL(file,assetBase).href;
+      const url = new URL(file,assetBase);url.searchParams.set('v',assetVersion);
+      script.src = url.href;
       script.onload = () => window[globalName] ? resolve(window[globalName]) : reject(new Error('PDF组件加载失败'));
       script.onerror = () => { script.remove(); scriptCache.delete(file); reject(new Error('PDF组件未加载成功，请检查网络后重试')); };
       document.head.append(script);
